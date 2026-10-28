@@ -1,0 +1,50 @@
+{
+  "gallery": [
+    {
+      "image": "/images/projects/placeholder-01.jpg",
+      "title": "Kitchen fitting",
+      "location": "Glasgow",
+      "alt": "Placeholder: kitchen with island and pendant lights",
+      "placeholder": true
+    },
+    {
+      "image": "/images/projects/placeholder-02.jpg",
+      "title": "Bathroom renovation",
+      "location": "Glasgow",
+      "alt": "Placeholder: bathroom with freestanding bath",
+      "placeholder": true
+    },
+    {
+      "image": "/images/projects/placeholder-03.jpg",
+      "title": "Media wall",
+      "location": "Glasgow",
+      "alt": "Placeholder: media wall with slatted panels and shelving",
+      "placeholder": true
+    },
+    {
+      "image": "/images/projects/placeholder-04.jpg",
+      "title": "Kitchen fitting",
+      "location": "Glasgow",
+      "alt": "Placeholder: kitchen under roof windows",
+      "placeholder": true
+    },
+    {
+      "image": "/images/projects/placeholder-05.jpg",
+      "title": "Shower room",
+      "location": "Glasgow",
+      "alt": "Placeholder: shower room with illuminated mirror",
+      "placeholder": true
+    }
+  ],
+  "beforeAfter": [
+    {
+      "title": "Before & after placeholder",
+      "description": "Add a matching pair of before and after photos here.",
+      "before": "/images/projects/before-placeholder.jpg",
+      "after": "/images/projects/after-placeholder.jpg",
+      "beforeAlt": "Placeholder for a before photo",
+      "afterAlt": "Placeholder for an after photo",
+      "placeholder": true
+    }
+  ]
+}

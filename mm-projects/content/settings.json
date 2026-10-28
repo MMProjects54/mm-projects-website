@@ -1,0 +1,53 @@
+{
+  "business": {
+    "name": "MM Projects",
+    "tagline": "Home Improvements & Property Renovations",
+    "serviceArea": "Glasgow and surrounding areas",
+    "areasCovered": []
+  },
+  "siteUrl": "",
+  "contact": {
+    "phoneDisplay": "07459 428097",
+    "phoneInternational": "+447459428097",
+    "whatsappNumber": "447459428097",
+    "whatsappMessage": "Hi MM Projects, I'd like to ask about a project.",
+    "email": ""
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/mmprojectsuk/",
+    "tiktok": "",
+    "facebook": ""
+  },
+  "tally": {
+    "enquiryForm": "https://tally.so/r/pbjq9b",
+    "siteVisitForm": "",
+    "formBackground": "#536253"
+  },
+  "booking": {
+    "url": ""
+  },
+  "reviewsLink": "",
+  "logo": {
+    "mark": "/images/logo-mark.png",
+    "alt": "MM Projects logo"
+  },
+  "brand": {
+    "charcoal": "#1c211d",
+    "charcoalSoft": "#262e29",
+    "charcoalLine": "#323a35",
+    "sage": "#647464",
+    "sageDark": "#536253",
+    "sageLight": "#a9b3aa",
+    "sageTint": "#e9ede8",
+    "paper": "#f6f6f5",
+    "ink": "#161a17",
+    "muted": "#5d635f"
+  },
+  "seo": {
+    "homeTitle": "Kitchen Fitting, Bathroom Renovations & Joinery in Glasgow | MM Projects",
+    "homeDescription": "MM Projects: kitchen fitting, bathroom renovations, bespoke joinery, fitted wardrobes, flooring and doors in Glasgow and surrounding areas. Request a free quote.",
+    "servicesTitle": "Our Services: Kitchens, Bathrooms & Bespoke Joinery in Glasgow | MM Projects",
+    "servicesDescription": "Kitchen fitting, bathroom renovations, bespoke joinery, fitted wardrobes, flooring and doors across Glasgow and surrounding areas, from MM Projects.",
+    "shareImage": "/images/hero-kitchen-desktop.jpg"
+  }
+}

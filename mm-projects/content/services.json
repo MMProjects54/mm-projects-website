@@ -1,0 +1,92 @@
+[
+  {
+    "id": "kitchen-fitting",
+    "title": "Complete Kitchen Fitting",
+    "summary": "Bespoke kitchens, expertly fitted to the highest standard.",
+    "details": "A kitchen has to work hard every day and still look good doing it. We fit kitchens carefully and accurately, from the first measure through to the final adjustments, so doors line up, worktops sit true and the finish lasts.",
+    "includes": [
+      "Kitchen unit and worktop fitting",
+      "Appliance fitting",
+      "Finishing details such as end panels, plinths and trims",
+      "Replacing an existing kitchen or fitting a new one"
+    ],
+    "image": "/images/services/kitchen.jpg",
+    "imageAlt": "Modern kitchen with dark units and an island",
+    "icon": "kitchen"
+  },
+  {
+    "id": "bathroom-renovations",
+    "title": "Bathroom Renovations",
+    "summary": "Modern, functional bathrooms built to last.",
+    "details": "From a simple refresh to a complete renovation, we create bathrooms that are practical for everyday life and a pleasure to use, with careful attention to layout, storage and finish.",
+    "includes": [
+      "Complete bathroom renovations",
+      "Bathroom and en-suite refits",
+      "Vanity units and bathroom storage",
+      "Finishing and fitting details"
+    ],
+    "image": "/images/services/bathroom.jpg",
+    "imageAlt": "Bathroom with a freestanding bath and stone-effect tiles",
+    "icon": "bathroom"
+  },
+  {
+    "id": "bespoke-joinery",
+    "title": "Bespoke Joinery",
+    "summary": "Custom storage, media walls and cabinetry.",
+    "details": "Bespoke joinery makes the most of awkward spaces and adds character to a room. We design and build pieces around your home, whether that is a media wall, alcove units or made-to-measure cabinetry.",
+    "includes": [
+      "Media walls",
+      "Alcove and under-stair storage",
+      "Built-in cabinetry and shelving",
+      "Made-to-measure joinery"
+    ],
+    "image": "/images/services/joinery.jpg",
+    "imageAlt": "Media wall with a television and lit shelving",
+    "icon": "joinery"
+  },
+  {
+    "id": "fitted-wardrobes",
+    "title": "Fitted Wardrobes",
+    "summary": "Stylish, practical storage solutions.",
+    "details": "Fitted wardrobes give you more storage from the same space. We build them to suit the room and the way you use it, with the right mix of hanging space, shelving and drawers.",
+    "includes": [
+      "Floor-to-ceiling fitted wardrobes",
+      "Wardrobes for alcoves and sloping ceilings",
+      "Internal shelving and drawers",
+      "Dressing room storage"
+    ],
+    "image": "/images/services/wardrobes.jpg",
+    "imageAlt": "Fitted wardrobes with open shelving",
+    "icon": "wardrobes"
+  },
+  {
+    "id": "flooring",
+    "title": "Flooring",
+    "summary": "High quality flooring installation.",
+    "details": "The right floor ties a renovation together. We prepare and lay flooring with care so it looks right and stands up to everyday use.",
+    "includes": [
+      "Flooring installation",
+      "Floor preparation",
+      "Skirting and finishing trims",
+      "Flooring for single rooms or whole homes"
+    ],
+    "image": "/images/services/flooring.jpg",
+    "imageAlt": "Herringbone wooden floor in a bright room",
+    "icon": "flooring"
+  },
+  {
+    "id": "doors",
+    "title": "Doors",
+    "summary": "Supply and fitting of internal and external doors.",
+    "details": "New doors can transform a home. We supply and fit internal and external doors, hung accurately so they open, close and latch properly.",
+    "includes": [
+      "Internal doors",
+      "External doors",
+      "Door hanging and adjustment",
+      "Frames, architraves and ironmongery"
+    ],
+    "image": "/images/services/doors.jpg",
+    "imageAlt": "Pale grey internal doors in a hallway",
+    "icon": "doors"
+  }
+]

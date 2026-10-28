@@ -1,0 +1,93 @@
+{
+  "title": "Privacy Notice",
+  "lastUpdated": "27 October 2026",
+  "intro": "This notice explains how {business} collects and uses personal information when you visit this website, send us an enquiry or ask us to arrange a site visit.",
+  "sections": [
+    {
+      "heading": "Who we are",
+      "paragraphs": [
+        "{business} is a home improvement and property renovation business serving Glasgow and surrounding areas. We are responsible for the personal information described in this notice. You can contact us by phone on {phone}{emailSentence}."
+      ],
+      "list": [],
+      "after": []
+    },
+    {
+      "heading": "Information we collect",
+      "paragraphs": [
+        "When you use our enquiry or site visit form, call us or message us, we may collect:"
+      ],
+      "list": [
+        "your name, email address and phone number",
+        "your postcode or the address of the property",
+        "details about your project, including your preferred start date",
+        "photos you choose to upload of your space",
+        "any other information you include in your messages to us"
+      ],
+      "after": []
+    },
+    {
+      "heading": "How we use it",
+      "paragraphs": [
+        "We use your information:"
+      ],
+      "list": [
+        "to reply to your enquiry and answer your questions",
+        "to arrange and carry out a site visit or consultation",
+        "to prepare a quotation and, if you go ahead, to carry out and manage the work",
+        "to keep records we need for accounting and legal reasons"
+      ],
+      "after": [
+        "We use this information because you have asked us to provide a quotation or service (taking steps before entering into a contract, and performing that contract), because we have a legitimate interest in responding to enquiries and running our business, and where we must comply with legal obligations.",
+        "We do not sell your information or use it for unrelated marketing."
+      ]
+    },
+    {
+      "heading": "Services we use",
+      "paragraphs": [
+        "We use trusted third-party services to run this website and our business. They handle information on our behalf:"
+      ],
+      "list": [
+        "Tally, which provides our online enquiry forms and stores what you submit",
+        "TradieHQ, which we use to prepare quotations",
+        "Netlify, which hosts this website",
+        "WhatsApp, if you choose to message us there"
+      ],
+      "after": [
+        "Each of these services has its own privacy policy explaining how it protects information."
+      ]
+    },
+    {
+      "heading": "Cookies",
+      "paragraphs": [
+        "This website does not use advertising or analytics cookies. The embedded enquiry form is provided by Tally, which may use cookies or similar technologies needed for the form to work. Please see Tally’s privacy policy for details."
+      ],
+      "list": [],
+      "after": []
+    },
+    {
+      "heading": "How long we keep it",
+      "paragraphs": [
+        "We keep your information only for as long as we need it to deal with your enquiry, provide a quotation and complete any work, and for as long as we are required to keep business records by law."
+      ],
+      "list": [],
+      "after": []
+    },
+    {
+      "heading": "Your rights",
+      "paragraphs": [
+        "You have the right to ask for a copy of the information we hold about you, and to ask us to correct it, delete it or limit how we use it. You can also object to how we use it. To make a request, contact us using the details above.",
+        "If you are unhappy with how we have handled your information, you can complain to the Information Commissioner’s Office (ICO) at ico.org.uk. We would appreciate the chance to put things right first."
+      ],
+      "list": [],
+      "after": []
+    },
+    {
+      "heading": "Changes to this notice",
+      "paragraphs": [
+        "We may update this notice from time to time. The date at the top shows when it was last changed."
+      ],
+      "list": [],
+      "after": []
+    }
+  ]
+}

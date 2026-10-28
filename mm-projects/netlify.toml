@@ -1,0 +1,8 @@
+# Netlify settings. When this folder is connected to Netlify through GitHub,
+# Netlify runs the build and publishes the /public folder automatically.
+[build]
+  command = "node src/build.mjs"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "20"

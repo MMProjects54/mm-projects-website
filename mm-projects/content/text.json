@@ -1,0 +1,145 @@
+{
+  "nav": [
+    {
+      "label": "Home",
+      "href": "#top"
+    },
+    {
+      "label": "Our Services",
+      "href": "#services"
+    },
+    {
+      "label": "Recent Projects",
+      "href": "#projects"
+    },
+    {
+      "label": "About Us",
+      "href": "#about"
+    },
+    {
+      "label": "Request a Quote",
+      "href": "#quote"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Quality craftsmanship. Beautiful spaces.",
+    "heading": "Home Improvements & Property Renovations",
+    "subheading": "Kitchens • Bathrooms • Bespoke Joinery",
+    "location": "in Glasgow and surrounding areas.",
+    "button": "Get a Free Quote",
+    "image": "/images/hero-kitchen-desktop.jpg",
+    "imageMobile": "/images/hero-kitchen-mobile.jpg",
+    "imageAlt": "Contemporary kitchen with a marble-effect island and pendant lights",
+    "highlights": [
+      "Experienced & Reliable",
+      "High Quality Finish",
+      "Domestic & Commercial"
+    ]
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "heading": "Complete Home Renovation Services",
+    "intro": "From modern kitchens and luxury bathrooms to bespoke joinery, flooring and doors, we deliver high quality craftsmanship tailored to your home.",
+    "viewAll": "View all services",
+    "mobileShowCount": 4
+  },
+  "projects": {
+    "eyebrow": "Recent Projects",
+    "heading": "Real Homes. Real Results.",
+    "intro": "Take a look at some of our recent kitchen, bathroom and joinery projects across Glasgow and surrounding areas.",
+    "viewMore": "View more projects",
+    "beforeAfterHeading": "Before & After",
+    "beforeAfterIntro": "Drag the slider to compare the space before and after the work.",
+    "placeholderLabel": "Placeholder image"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "heading": "Craftsmanship built around your home",
+    "paragraphs": [
+      "MM Projects is a Glasgow-based home improvement and property renovation business. We fit kitchens, renovate bathrooms and create bespoke joinery, fitted wardrobes, flooring and doors for homes across Glasgow and the surrounding areas.",
+      "Every project starts with a conversation. We take time to understand how you use your space, visit to measure up, and give you a clear quotation before any work begins. On site, we focus on tidy, careful workmanship and the finishing details that make a renovation feel right."
+    ],
+    "points": [
+      {
+        "title": "Considered workmanship",
+        "text": "Precise fitting and clean finishes, inside and out."
+      },
+      {
+        "title": "Clear communication",
+        "text": "We review every enquiry personally and keep you informed."
+      },
+      {
+        "title": "Local to Glasgow",
+        "text": "Covering Glasgow and surrounding areas."
+      }
+    ],
+    "image": "/images/about/about-placeholder.jpg",
+    "imageAlt": "Placeholder: bespoke media wall with fitted shelving",
+    "imageIsPlaceholder": true
+  },
+  "quote": {
+    "eyebrow": "Request a Quote",
+    "heading": "Start Your Project",
+    "intro": "Tell us a bit about your project and we'll get back to you as soon as possible with a no-obligation quotation. We don't provide instant quotes – every project is different and we like to understand your needs properly.",
+    "steps": [
+      {
+        "icon": "camera",
+        "text": "You can upload photos of your space"
+      },
+      {
+        "icon": "file",
+        "text": "We'll review your details and be in touch"
+      },
+      {
+        "icon": "calendar",
+        "text": "Option to book a site survey (see below)"
+      }
+    ],
+    "formTitle": "Project enquiry form",
+    "notConnected": "Preview only: the Tally form is not connected yet.",
+    "notConnectedHelp": "Add your Tally link under Business settings. Until then, please call or WhatsApp."
+  },
+  "siteVisit": {
+    "eyebrow": "Site Survey",
+    "heading": "Book a Consultation",
+    "intro": "We offer a free, no-obligation site visit in Glasgow and surrounding areas to discuss your project, take measurements and provide a detailed quotation.",
+    "button": "Request a Site Survey",
+    "note": "We'll review your request and confirm your appointment personally.",
+    "dialogTitle": "Request a site survey",
+    "image": "/images/about/consultation.jpg"
+  },
+  "contact": {
+    "heading": "Prefer to chat?",
+    "intro": "Get in touch directly via WhatsApp or phone.",
+    "whatsappButton": "WhatsApp Us"
+  },
+  "reviews": {
+    "eyebrow": "Customer Reviews",
+    "heading": "What Our Clients Say",
+    "intro": "Feedback from homeowners across Glasgow and surrounding areas.",
+    "leaveReview": "Leave us a review",
+    "placeholderTitle": "Placeholder: customer review",
+    "placeholderText": "A genuine customer review will appear here once added in the editing dashboard."
+  },
+  "footer": {
+    "summary": [
+      "Home Improvements & Property Renovations",
+      "Kitchens • Bathrooms • Bespoke Joinery • Flooring • Doors",
+      "Glasgow and surrounding areas"
+    ],
+    "bottomLine": "Joinery, kitchen fitting and bathroom renovations in Glasgow and surrounding areas.",
+    "privacyLink": "Privacy Notice"
+  },
+  "servicesPage": {
+    "eyebrow": "Our Services",
+    "heading": "Kitchens, Bathrooms & Bespoke Joinery in Glasgow",
+    "intro": "Whether you are planning a single room or a wider renovation, MM Projects can help. Every project begins with an enquiry and a site visit, so your quotation is based on your home and your plans.",
+    "listHeading": "Typical work includes",
+    "ctaHeading": "Ready to talk about your project?",
+    "ctaText": "Send us your project details and photos, and we will be in touch to arrange the next step."
+  }
+}

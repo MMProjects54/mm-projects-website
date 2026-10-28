@@ -1,0 +1,1 @@
+{ "name": "mm-projects-website", "version": "1.0.0", "private": true, "type": "module", "description": "MM Projects - static website generator (no dependencies)", "scripts": { "build": "node src/build.mjs", "preview": "node src/serve.mjs" }, "engines": { "node": ">=18" } }
