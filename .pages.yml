@@ -1,0 +1,397 @@
+# =============================================================================
+#  MM Projects editing dashboard (Pages CMS: https://app.pagescms.org)
+#  This file tells the dashboard which boxes to show. You don't need to edit it.
+#  (Version for a repository where the website files are inside an 'mm-projects' folder.)
+# =============================================================================
+
+media:
+  input: mm-projects/images
+  output: /images
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  # ---------------------------------------------------------------- PHOTOS
+  - name: projects
+    label: Project photos
+    type: file
+    path: mm-projects/content/projects.json
+    format: json
+    fields:
+      - name: gallery
+        label: Recent projects gallery
+        description: Shown in the dark "Real Homes. Real Results." section. Drag to reorder. Photos about 1600px wide and under 1 MB work best.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title} ({location})"
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+            options:
+              path: projects
+          - name: title
+            label: Title
+            description: For example "Kitchen fitting"
+            type: string
+          - name: location
+            label: Area
+            description: For example "Bearsden"
+            type: string
+          - name: alt
+            label: Photo description (for Google and screen readers)
+            description: Describe what's in the photo, e.g. "Grey shaker kitchen with oak worktops"
+            type: string
+          - name: placeholder
+            label: This is a placeholder image
+            description: Untick once this is a real photo of your work. Ticked photos show a "Placeholder image" tag.
+            type: boolean
+      - name: beforeAfter
+        label: Before & after comparisons
+        description: Two photos taken from the same spot. Visitors drag a slider to compare them.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Short description
+            type: string
+          - name: before
+            label: Before photo
+            type: image
+            required: true
+            options:
+              path: projects
+          - name: after
+            label: After photo
+            type: image
+            required: true
+            options:
+              path: projects
+          - name: beforeAlt
+            label: Before photo description
+            type: string
+          - name: afterAlt
+            label: After photo description
+            type: string
+          - name: placeholder
+            label: These are placeholder images
+            description: Untick once these are real photos.
+            type: boolean
+
+  # ---------------------------------------------------------------- REVIEWS
+  - name: reviews
+    label: Customer reviews
+    type: file
+    path: mm-projects/content/reviews.json
+    format: json
+    list: true
+    fields:
+      - name: text
+        label: Review (word for word)
+        description: Only genuine reviews from real customers, with their permission.
+        type: text
+        required: true
+      - name: name
+        label: Customer name
+        description: First name and initial is fine, e.g. "Sarah M."
+        type: string
+        required: true
+      - name: location
+        label: Area
+        type: string
+      - name: project
+        label: Project
+        description: For example "Kitchen fitting"
+        type: string
+      - name: rating
+        label: Star rating (optional)
+        description: Only if the customer gave a star rating, 1 to 5. Leave empty otherwise.
+        type: number
+      - name: source
+        label: Where it was left (optional)
+        description: For example "Google" or "Facebook"
+        type: string
+      - name: sourceUrl
+        label: Link to the original review (optional)
+        type: string
+
+  # ---------------------------------------------------------------- WEBSITE TEXT
+  - name: text
+    label: Website text
+    type: file
+    path: mm-projects/content/text.json
+    format: json
+    fields:
+      - name: hero
+        label: Top of homepage
+        type: object
+        fields:
+          - { name: eyebrow, label: Small text above the heading, type: string }
+          - { name: heading, label: Main heading, type: string }
+          - { name: subheading, label: Services line, type: string }
+          - { name: location, label: Location line, type: string }
+          - { name: button, label: Button text, type: string }
+          - name: image
+            label: Main photo (desktop)
+            description: A wide landscape photo, about 2000px wide.
+            type: image
+          - name: imageMobile
+            label: Main photo (phones)
+            description: A less wide crop of the same photo, about 1000px wide.
+            type: image
+          - { name: imageAlt, label: Photo description, type: string }
+          - { name: highlights, label: Ticks under the button, type: string, list: true }
+      - name: services
+        label: Our Services section
+        type: object
+        fields:
+          - { name: eyebrow, label: Small text above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Introduction, type: text }
+          - { name: viewAll, label: Link text, type: string }
+          - { name: mobileShowCount, label: Services shown on phones before "View All", type: number }
+      - name: projects
+        label: Recent Projects section
+        type: object
+        fields:
+          - { name: eyebrow, label: Small text above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Introduction, type: text }
+          - { name: viewMore, label: Link text (goes to Instagram), type: string }
+          - { name: beforeAfterHeading, label: Before & after heading, type: string }
+          - { name: beforeAfterIntro, label: Before & after introduction, type: text }
+          - { name: placeholderLabel, label: Placeholder tag text, type: string }
+      - name: about
+        label: About Us section
+        type: object
+        fields:
+          - { name: eyebrow, label: Small text above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: paragraphs, label: Paragraphs, type: text, list: true }
+          - name: points
+            label: Key points
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: text, label: Text, type: string }
+          - { name: image, label: Photo, type: image }
+          - { name: imageAlt, label: Photo description, type: string }
+          - { name: imageIsPlaceholder, label: This is a placeholder photo, description: Untick once it's a real photo., type: boolean }
+      - name: quote
+        label: Request a Quote section
+        type: object
+        fields:
+          - { name: eyebrow, label: Small text above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Introduction, type: text }
+          - name: steps
+            label: Points beside the form
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: Icon
+                type: select
+                options:
+                  values: [camera, file, calendar, check, phone, mapPin, chat]
+              - { name: text, label: Text, type: string }
+          - { name: formTitle, label: Form name (for screen readers), type: string }
+          - { name: notConnected, label: Message if the form isn't connected, type: string }
+          - { name: notConnectedHelp, label: Help text if the form isn't connected, type: string }
+      - name: siteVisit
+        label: Book a Consultation box
+        type: object
+        fields:
+          - { name: eyebrow, label: Small text above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Text, type: text }
+          - { name: button, label: Button text, type: string }
+          - { name: note, label: Note under the button, type: string }
+          - { name: dialogTitle, label: Pop-up heading, type: string }
+          - { name: image, label: Background photo, type: image }
+      - name: contact
+        label: Prefer to chat? box
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Text, type: string }
+          - { name: whatsappButton, label: WhatsApp button text, type: string }
+      - name: reviews
+        label: Reviews section
+        type: object
+        fields:
+          - { name: eyebrow, label: Small text above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Introduction, type: text }
+          - { name: leaveReview, label: Review link text, type: string }
+          - { name: placeholderTitle, label: Placeholder card title (shown until reviews are added), type: string }
+          - { name: placeholderText, label: Placeholder card text, type: string }
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - { name: summary, label: Lines beside the logo, type: string, list: true }
+          - { name: bottomLine, label: Bottom line, type: string }
+          - { name: privacyLink, label: Privacy link text, type: string }
+      - name: servicesPage
+        label: Services page
+        type: object
+        fields:
+          - { name: eyebrow, label: Small text above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Introduction, type: text }
+          - { name: listHeading, label: Heading above each list, type: string }
+          - { name: ctaHeading, label: Bottom banner heading, type: string }
+          - { name: ctaText, label: Bottom banner text, type: text }
+      - name: nav
+        label: Menu
+        description: Menu labels. Keep the link codes (e.g. "#services") as they are.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: href, label: Link code, type: string }
+
+  # ---------------------------------------------------------------- SERVICES
+  - name: services
+    label: Services
+    type: file
+    path: mm-projects/content/services.json
+    format: json
+    list: true
+    fields:
+      - { name: title, label: Service name, type: string, required: true }
+      - { name: summary, label: One-line summary (homepage card), type: string }
+      - { name: details, label: Description (Services page), type: text }
+      - { name: includes, label: Typical work includes, type: string, list: true }
+      - name: image
+        label: Photo
+        type: image
+        options:
+          path: services
+      - { name: imageAlt, label: Photo description, type: string }
+      - name: icon
+        label: Icon
+        type: select
+        options:
+          values: [kitchen, bathroom, joinery, wardrobes, flooring, doors]
+      - name: id
+        label: Web address name
+        description: Lowercase letters and hyphens only, e.g. "kitchen-fitting". Changing it changes the link to this service.
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9-]+$"
+          message: Use lowercase letters, numbers and hyphens only
+
+  # ---------------------------------------------------------------- SETTINGS
+  - name: settings
+    label: Business settings
+    type: file
+    path: mm-projects/content/settings.json
+    format: json
+    fields:
+      - name: contact
+        label: Contact details
+        type: object
+        fields:
+          - { name: phoneDisplay, label: Phone number (as shown), type: string }
+          - { name: phoneInternational, label: Phone number for click-to-call, description: "Start with +44 and drop the first 0, e.g. +447459428097", type: string }
+          - { name: whatsappNumber, label: WhatsApp number, description: "44 then the number without the first 0, no spaces, e.g. 447459428097", type: string }
+          - { name: whatsappMessage, label: Pre-filled WhatsApp message, type: string }
+          - { name: email, label: Email address (optional), type: string }
+      - name: social
+        label: Social media links
+        description: Paste the full profile link. Leave empty to hide the icon.
+        type: object
+        fields:
+          - { name: instagram, label: Instagram, type: string }
+          - { name: tiktok, label: TikTok, type: string }
+          - { name: facebook, label: Facebook, type: string }
+      - name: tally
+        label: Tally forms
+        type: object
+        fields:
+          - { name: enquiryForm, label: Enquiry form link, description: "From Tally > Share, e.g. https://tally.so/r/pbjq9b", type: string }
+          - { name: siteVisitForm, label: Site visit form link (optional), description: Leave empty to use the enquiry form for site visits too., type: string }
+          - { name: formBackground, label: Colour behind the form while loading, description: "Match your Tally form background, e.g. #536253", type: string }
+      - name: booking
+        label: Booking page (optional)
+        type: object
+        fields:
+          - { name: url, label: Booking link, description: "e.g. a Calendly link. Leave empty to use the Tally form.", type: string }
+      - { name: reviewsLink, label: Google review link (optional), description: Shows a "Leave us a review" link., type: string }
+      - name: business
+        label: Business
+        type: object
+        fields:
+          - { name: name, label: Business name, type: string }
+          - { name: tagline, label: Tagline, type: string }
+          - { name: serviceArea, label: Service area, type: string }
+          - { name: areasCovered, label: Towns and areas you cover, description: Shown in About Us and helps local Google searches., type: string, list: true }
+      - { name: siteUrl, label: Website address, description: "Your live domain, e.g. https://www.mmprojects.co.uk (no slash at the end)", type: string }
+      - name: logo
+        label: Logo
+        type: object
+        fields:
+          - { name: mark, label: Logo image, description: White logo on a transparent background (PNG)., type: image }
+          - { name: alt, label: Logo description, type: string }
+      - name: brand
+        label: Brand colours
+        description: "Colour codes like #647464"
+        type: object
+        fields:
+          - { name: charcoal, label: Header and hero background, type: string }
+          - { name: charcoalSoft, label: Projects section and footer, type: string }
+          - { name: charcoalLine, label: Footer bottom bar, type: string }
+          - { name: sage, label: Buttons, type: string }
+          - { name: sageDark, label: Button hover, type: string }
+          - { name: sageLight, label: Light accents on dark backgrounds, type: string }
+          - { name: sageTint, label: Pale highlights, type: string }
+          - { name: paper, label: Light section background, type: string }
+          - { name: ink, label: Main text, type: string }
+          - { name: muted, label: Secondary text, type: string }
+      - name: seo
+        label: Google search
+        type: object
+        fields:
+          - { name: homeTitle, label: Homepage title in Google, type: string }
+          - { name: homeDescription, label: Homepage description in Google, type: text }
+          - { name: servicesTitle, label: Services page title in Google, type: string }
+          - { name: servicesDescription, label: Services page description in Google, type: text }
+          - { name: shareImage, label: Image shown when the site is shared, type: image }
+
+  # ---------------------------------------------------------------- PRIVACY
+  - name: privacy
+    label: Privacy notice
+    type: file
+    path: mm-projects/content/privacy.json
+    format: json
+    fields:
+      - { name: title, label: Page title, type: string }
+      - { name: lastUpdated, label: Last updated, description: e.g. 27 October 2026, type: string }
+      - { name: intro, label: Introduction, description: "{business}, {phone} and {email} are filled in automatically.", type: text }
+      - name: sections
+        label: Sections
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: paragraphs, label: Paragraphs, type: text, list: true }
+          - { name: list, label: Bullet points, type: string, list: true }
+          - { name: after, label: Paragraphs after the bullet points, type: text, list: true }
