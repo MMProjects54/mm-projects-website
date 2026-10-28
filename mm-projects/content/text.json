@@ -1,43 +1,15 @@
 {
-  "nav": [
-    {
-      "label": "Home",
-      "href": "#top"
-    },
-    {
-      "label": "Our Services",
-      "href": "#services"
-    },
-    {
-      "label": "Recent Projects",
-      "href": "#projects"
-    },
-    {
-      "label": "About Us",
-      "href": "#about"
-    },
-    {
-      "label": "Request a Quote",
-      "href": "#quote"
-    },
-    {
-      "label": "Contact",
-      "href": "#contact"
-    }
-  ],
   "hero": {
-    "eyebrow": "Quality craftsmanship. Beautiful spaces.",
     "heading": "Home Improvements & Property Renovations",
     "subheading": "Kitchens • Bathrooms • Bespoke Joinery",
     "location": "in Glasgow and surrounding areas.",
     "button": "Get a Free Quote",
     "image": "/images/hero-kitchen-desktop.jpg",
     "imageMobile": "/images/hero-kitchen-mobile.jpg",
-    "imageAlt": "Contemporary kitchen with a marble-effect island and pendant lights",
     "highlights": [
-      "Experienced & Reliable",
+      "Quality Craftsmanship",
       "High Quality Finish",
-      "Domestic & Commercial"
+      "Tailored to You"
     ]
   },
   "services": {
@@ -53,8 +25,7 @@
     "intro": "Take a look at some of our recent kitchen, bathroom and joinery projects across Glasgow and surrounding areas.",
     "viewMore": "View more projects",
     "beforeAfterHeading": "Before & After",
-    "beforeAfterIntro": "Drag the slider to compare the space before and after the work.",
-    "placeholderLabel": "Placeholder image"
+    "beforeAfterIntro": "Drag the slider to compare the space before and after the work."
   },
   "about": {
     "eyebrow": "About Us",
@@ -77,18 +48,17 @@
         "text": "Covering Glasgow and surrounding areas."
       }
     ],
-    "image": "/images/about/about-placeholder.jpg",
     "imageAlt": "Placeholder: bespoke media wall with fitted shelving",
     "imageIsPlaceholder": true
   },
   "quote": {
     "eyebrow": "Request a Quote",
     "heading": "Start Your Project",
-    "intro": "Tell us a bit about your project and we'll get back to you as soon as possible with a no-obligation quotation. We don't provide instant quotes – every project is different and we like to understand your needs properly.",
+    "intro": "Tell us about your project and we'll get back to you as soon as possible to discuss your requirements and arrange a site survey. Following the visit, we will provide a no-obligation quotation tailored to your project.",
     "steps": [
       {
-        "icon": "camera",
-        "text": "You can upload photos of your space"
+        "icon": "chat",
+        "text": "Get in touch with us Today"
       },
       {
         "icon": "file",
@@ -96,7 +66,7 @@
       },
       {
         "icon": "calendar",
-        "text": "Option to book a site survey (see below)"
+        "text": "Book in site survey "
       }
     ],
     "formTitle": "Project enquiry form",
@@ -141,5 +111,31 @@
     "listHeading": "Typical work includes",
     "ctaHeading": "Ready to talk about your project?",
     "ctaText": "Send us your project details and photos, and we will be in touch to arrange the next step."
-  }
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "#top"
+    },
+    {
+      "label": "Our Services",
+      "href": "#services"
+    },
+    {
+      "label": "Recent Projects",
+      "href": "#projects"
+    },
+    {
+      "label": "About Us",
+      "href": "#about"
+    },
+    {
+      "label": "Request a Quote",
+      "href": "#quote"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ]
 }
