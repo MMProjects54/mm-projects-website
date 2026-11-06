@@ -49,9 +49,9 @@
         "text": "Covering Glasgow and surrounding areas."
       }
     ],
-    "imageAlt": "Placeholder: bespoke media wall with fitted shelving",
-    "imageIsPlaceholder": true,
-    "image": "/images/about/about-placeholder.jpg"
+    "imageAlt": "MM Projects logo: a house outline with the letters MM",
+    "imageIsPlaceholder": false,
+    "image": "/images/about/mm-projects-logo.jpg"
   },
   "quote": {
     "eyebrow": "Request a Quote",
