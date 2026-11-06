@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "text": "Really happy with our new kitchen. The guys did a fantastic job and paid attention to all the little details. Everything was finished to a great standard and we’re delighted with how it’s turned out.",
+    "name": "",
+    "location": "",
+    "project": "Kitchen Installation",
+    "rating": "",
+    "source": "",
+    "sourceUrl": ""
+  },
+  {
+    "text": "Great job fitting wall panelling in our living room. It’s made a difference to the space and everything looks brilliant. Really pleased with the workmanship and would definitely recommend.",
+    "name": "",
+    "location": "",
+    "project": "Decorative Wall Panelling",
+    "rating": "",
+    "source": "",
+    "sourceUrl": ""
+  },
+  {
+    "text": "We had a media wall fitted and couldn’t be happier. Exactly what we were looking for and the finish is excellent. The guys were professional and left everything tidy afterwards. Would happily use them again.",
+    "name": "",
+    "location": "",
+    "project": "Bespoke Media Wall",
+    "rating": "",
+    "source": "",
+    "sourceUrl": ""
+  }
+]

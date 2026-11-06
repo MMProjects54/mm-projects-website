@@ -90,7 +90,8 @@ export function reviewCard(review, t) {
   const stars = Number.isFinite(review.rating) && review.rating > 0
     ? `<p class="review-card__stars" aria-label="${review.rating} out of 5 stars">${Array.from({ length: Math.min(5, Math.round(review.rating)) }, () => icon('star', { size: 16 })).join('')}</p>`
     : '';
-  const meta = [review.project, review.location].filter(Boolean).join(' · ');
+  const heading = review.name || review.project || '';
+  const meta = [review.name ? review.project : '', review.location].filter(Boolean).join(' · ');
   const source = review.source
     ? (review.sourceUrl ? `<a href="${esc(review.sourceUrl)}" rel="noopener" target="_blank">${esc(review.source)}</a>` : esc(review.source))
     : '';
@@ -98,7 +99,7 @@ export function reviewCard(review, t) {
   ${icon('quote', { size: 28, className: 'review-card__quote' })}
   ${stars}
   <blockquote class="review-card__text"><p>${esc(review.text)}</p></blockquote>
-  <p class="review-card__name">${esc(review.name)}</p>
+  ${heading ? `<p class="review-card__name">${esc(heading)}</p>` : ''}
   ${meta || source ? `<p class="review-card__meta">${esc(meta)}${meta && source ? ' · ' : ''}${source}</p>` : ''}
 </li>`;
 }

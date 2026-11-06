@@ -100,10 +100,9 @@ content:
         type: text
         required: true
       - name: name
-        label: Customer name
-        description: First name and initial is fine, e.g. "Sarah M."
+        label: Customer name (optional)
+        description: Only with the customer's permission. First name and initial is fine, e.g. "Sarah M."
         type: string
-        required: true
       - name: location
         label: Area
         type: string
