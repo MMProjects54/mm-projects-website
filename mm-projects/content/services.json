@@ -10,8 +10,8 @@
       "Finishing details such as end panels, plinths and trims",
       "Replacing an existing kitchen or fitting a new one"
     ],
-    "image": "/images/services/kitchen.jpg",
-    "imageAlt": "Modern kitchen with dark units and an island",
+    "image": "/images/projects/kitchen-fitting.jpg",
+    "imageAlt": "Grey shaker kitchen with a stone-effect island and a glass pendant light beneath a skylight",
     "icon": "kitchen"
   },
   {
@@ -25,8 +25,8 @@
       "Vanity units and bathroom storage",
       "Finishing and fitting details"
     ],
-    "image": "/images/services/bathroom.jpg",
-    "imageAlt": "Bathroom with a freestanding bath and stone-effect tiles",
+    "image": "/images/projects/bathroom-renovation.jpg",
+    "imageAlt": "Bathroom with an L-shaped bath and shower screen, pedestal basin and dark floor tiles",
     "icon": "bathroom"
   },
   {
@@ -55,8 +55,8 @@
       "Internal shelving and drawers",
       "Dressing room storage"
     ],
-    "image": "/images/services/wardrobes.jpg",
-    "imageAlt": "Fitted wardrobes with open shelving",
+    "image": "/images/projects/fitted-wardrobes.jpg",
+    "imageAlt": "Floor-to-ceiling fitted wardrobes with sliding shaker-style doors and drawers below",
     "icon": "wardrobes"
   },
   {
@@ -70,8 +70,8 @@
       "Skirting and finishing trims",
       "Flooring for single rooms or whole homes"
     ],
-    "image": "/images/services/flooring.jpg",
-    "imageAlt": "Herringbone wooden floor in a bright room",
+    "image": "/images/projects/flooring.jpg",
+    "imageAlt": "Oak-effect flooring laid through a freshly decorated room",
     "icon": "flooring"
   },
   {
@@ -85,8 +85,8 @@
       "Door hanging and adjustment",
       "Frames, architraves and ironmongery"
     ],
-    "image": "/images/services/doors.jpg",
-    "imageAlt": "Pale grey internal doors in a hallway",
+    "image": "/images/projects/glazed-internal-doors.jpg",
+    "imageAlt": "Black-framed glazed double doors leading into a living room, with herringbone flooring",
     "icon": "doors"
   }
 ]

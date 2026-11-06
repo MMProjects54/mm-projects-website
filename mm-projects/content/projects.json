@@ -1,39 +1,39 @@
 {
   "gallery": [
     {
-      "image": "/images/projects/placeholder-01.jpg",
+      "image": "/images/projects/kitchen-fitting.jpg",
       "title": "Kitchen fitting",
-      "location": "Glasgow",
-      "alt": "Placeholder: kitchen with island and pendant lights",
-      "placeholder": true
+      "location": "",
+      "alt": "Grey shaker kitchen with a stone-effect island and a glass pendant light beneath a skylight",
+      "placeholder": false
     },
     {
-      "image": "/images/projects/placeholder-02.jpg",
+      "image": "/images/projects/bathroom-renovation.jpg",
       "title": "Bathroom renovation",
-      "location": "Glasgow",
-      "alt": "Placeholder: bathroom with freestanding bath",
-      "placeholder": true
+      "location": "",
+      "alt": "Bathroom with an L-shaped bath and shower screen, pedestal basin and dark floor tiles",
+      "placeholder": false
     },
     {
-      "image": "/images/projects/placeholder-03.jpg",
-      "title": "Media wall",
-      "location": "Glasgow",
-      "alt": "Placeholder: media wall with slatted panels and shelving",
-      "placeholder": true
+      "image": "/images/projects/glazed-internal-doors.jpg",
+      "title": "Glazed internal doors",
+      "location": "",
+      "alt": "Black-framed glazed double doors leading into a living room, with herringbone flooring",
+      "placeholder": false
     },
     {
-      "image": "/images/projects/placeholder-04.jpg",
-      "title": "Kitchen fitting",
-      "location": "Glasgow",
-      "alt": "Placeholder: kitchen under roof windows",
-      "placeholder": true
+      "image": "/images/projects/fitted-wardrobes.jpg",
+      "title": "Fitted wardrobes",
+      "location": "",
+      "alt": "Floor-to-ceiling fitted wardrobes with sliding shaker-style doors and drawers below",
+      "placeholder": false
     },
     {
-      "image": "/images/projects/placeholder-05.jpg",
-      "title": "Shower room",
-      "location": "Glasgow",
-      "alt": "Placeholder: shower room with illuminated mirror",
-      "placeholder": true
+      "image": "/images/projects/flooring.jpg",
+      "title": "Flooring",
+      "location": "",
+      "alt": "Oak-effect flooring laid through a freshly decorated room",
+      "placeholder": false
     }
   ],
   "beforeAfter": [
