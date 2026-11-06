@@ -259,14 +259,17 @@ main:focus { outline: none; }
 .quote__form { padding: 24px; }
 .quote__aside { display: grid; gap: 20px; }
 
-.consult { position: relative; overflow: hidden; padding: 28px; }
-.consult__bg { position: absolute; top: 0; right: 0; bottom: 0; width: 38%; background-size: cover; background-position: center; }
-.consult__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--white) 0%, rgba(255, 255, 255, 0.72) 40%, rgba(255, 255, 255, 0.1) 100%); }
+/* Book a Consultation: dark green box with the green logo artwork behind it */
+.consult { position: relative; overflow: hidden; padding: 28px; background: #38423a; color: var(--white); }
+.consult__bg { position: absolute; top: 0; right: -6%; bottom: 0; width: 58%; background-size: cover; background-position: center; }
+.consult__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #38423a 0%, rgba(56, 66, 58, 0.55) 35%, rgba(56, 66, 58, 0.15) 100%); }
 .consult__content { position: relative; z-index: 1; max-width: 76%; }
-.consult .section-title { font-size: clamp(1.45rem, 1.2rem + 0.6vw, 1.7rem); }
-.consult .section-intro { font-size: 14.5px; max-width: 32ch; color: #4a504c; }
-.consult .btn { margin-top: 20px; min-height: 44px; padding-inline: 22px; font-size: 14px; }
-.consult__note { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 12.5px; color: var(--muted); max-width: 32ch; }
+.consult .eyebrow { color: rgba(255, 255, 255, 0.78); }
+.consult .section-title { font-size: clamp(1.45rem, 1.2rem + 0.6vw, 1.7rem); color: var(--white); }
+.consult .section-intro { font-size: 14.5px; max-width: 32ch; color: rgba(255, 255, 255, 0.86); }
+.consult .btn { margin-top: 20px; min-height: 44px; padding-inline: 22px; font-size: 14px; background: var(--white); color: var(--ink); }
+.consult .btn:hover { background: var(--sage-tint); }
+.consult__note { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 12.5px; color: rgba(255, 255, 255, 0.78); max-width: 32ch; }
 
 .chat { padding: 24px 28px 28px; scroll-margin-top: calc(var(--header-h) + 16px); }
 .chat__title { font-size: 19px; font-weight: 600; letter-spacing: -0.01em; }
@@ -306,7 +309,7 @@ main:focus { outline: none; }
   .quote__form { padding: 18px; }
   .fake-form { grid-template-columns: 1fr; }
   .fake-submit { justify-self: stretch; }
-  .consult__bg { width: 40%; opacity: 0.7; }
+  .consult__bg { width: 60%; opacity: 0.55; }
 }
 
 /* ---------- Reviews ---------- */
