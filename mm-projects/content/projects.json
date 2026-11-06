@@ -38,13 +38,13 @@
   ],
   "beforeAfter": [
     {
-      "title": "Before & after placeholder",
-      "description": "Add a matching pair of before and after photos here.",
-      "before": "/images/projects/before-placeholder.jpg",
-      "after": "/images/projects/after-placeholder.jpg",
-      "beforeAlt": "Placeholder for a before photo",
-      "afterAlt": "Placeholder for an after photo",
-      "placeholder": true
+      "title": "Kitchen fitting",
+      "description": "From a bare, freshly plastered room to a fitted shaker kitchen with an island.",
+      "before": "/images/projects/kitchen-before.jpg",
+      "after": "/images/projects/kitchen-after.jpg",
+      "beforeAlt": "The room before work began: bare plastered walls, a skylight and an exposed stone gable",
+      "afterAlt": "The finished kitchen: grey shaker units, a stone-effect island and a glass pendant light beneath the skylight",
+      "placeholder": false
     }
   ]
 }

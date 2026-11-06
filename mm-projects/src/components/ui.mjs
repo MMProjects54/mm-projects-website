@@ -60,8 +60,12 @@ export function galleryTile(ctx, p, index, placeholderLabel) {
 
 /** Accessible before/after comparison slider. Works as a side-by-side pair without JavaScript. */
 export function beforeAfter(ctx, item, placeholderLabel) {
-  return `<figure class="ba" data-ba>
-  <div class="ba__frame" style="--pos:50%">
+  // Tall (portrait) photos get a tall frame so nothing important is cropped off.
+  const size = ctx.imageSizes[item.after];
+  const portrait = size && size.height > size.width * 1.05;
+  const shape = portrait ? `;aspect-ratio:${size.width} / ${size.height}` : '';
+  return `<figure class="ba${portrait ? ' ba--portrait' : ''}" data-ba>
+  <div class="ba__frame" style="--pos:50%${shape}">
     ${img(ctx, { src: item.after, alt: item.afterAlt, className: 'ba__img ba__img--after' })}
     <div class="ba__before">${img(ctx, { src: item.before, alt: item.beforeAlt, className: 'ba__img' })}</div>
     <span class="ba__label ba__label--before" aria-hidden="true">Before</span>
