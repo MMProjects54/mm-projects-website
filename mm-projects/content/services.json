@@ -40,8 +40,8 @@
       "Built-in cabinetry and shelving",
       "Made-to-measure joinery"
     ],
-    "image": "/images/services/joinery.jpg",
-    "imageAlt": "Media wall with a television and lit shelving",
+    "image": "/images/projects/media-wall.jpg",
+    "imageAlt": "Bespoke media wall with a concrete-effect TV surround and floating cabinet below",
     "icon": "joinery"
   },
   {
@@ -85,8 +85,8 @@
       "Door hanging and adjustment",
       "Frames, architraves and ironmongery"
     ],
-    "image": "/images/projects/glazed-internal-doors.jpg",
-    "imageAlt": "Black-framed glazed double doors leading into a living room, with herringbone flooring",
+    "image": "/images/projects/oak-internal-door.jpg",
+    "imageAlt": "Oak internal door fitted in a panelled room with new architrave and skirting",
     "icon": "doors"
   }
 ]
