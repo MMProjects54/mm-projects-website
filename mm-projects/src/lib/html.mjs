@@ -39,7 +39,7 @@ export function parseTally(link) {
     id,
     shareUrl: `https://tally.so/r/${id}`,
     // Official Tally embed. The form keeps its own background colours from Tally.
-    embedUrl: `https://tally.so/embed/${id}?alignLeft=1&hideTitle=1&dynamicHeight=1`,
+    embedUrl: `https://tally.so/embed/${id}?hideTitle=1&dynamicHeight=1`,
   };
 }
 

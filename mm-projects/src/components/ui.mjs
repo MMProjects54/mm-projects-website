@@ -26,7 +26,7 @@ export function img(ctx, { src, alt = '', className = '', eager = false, sizes =
 }
 
 export function placeholderTag(label) {
-  return `<span class="placeholder-tag">${icon('image', { size: 14 })}${esc(label)}</span>`;
+  return `<span class="placeholder-tag">${icon('image', { size: 14 })}${esc(label || 'Placeholder image')}</span>`;
 }
 
 /** Homepage service card (desktop: tile, mobile: list row). */

@@ -229,6 +229,7 @@ main:focus { outline: none; }
 
 /* ---------- About ---------- */
 .about__inner { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 80px); align-items: center; }
+.about__inner--text { grid-template-columns: minmax(0, 760px); }
 .about__media { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 3.2; background: var(--sage-tint); }
 .about__media img { width: 100%; height: 100%; object-fit: cover; }
 .about__content > p { margin-top: 16px; color: var(--muted); }

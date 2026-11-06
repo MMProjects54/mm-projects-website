@@ -25,7 +25,8 @@
     "intro": "Take a look at some of our recent kitchen, bathroom and joinery projects across Glasgow and surrounding areas.",
     "viewMore": "View more projects",
     "beforeAfterHeading": "Before & After",
-    "beforeAfterIntro": "Drag the slider to compare the space before and after the work."
+    "beforeAfterIntro": "Drag the slider to compare the space before and after the work.",
+    "placeholderLabel": "Placeholder image"
   },
   "about": {
     "eyebrow": "About Us",
@@ -49,7 +50,8 @@
       }
     ],
     "imageAlt": "Placeholder: bespoke media wall with fitted shelving",
-    "imageIsPlaceholder": true
+    "imageIsPlaceholder": true,
+    "image": "/images/about/about-placeholder.jpg"
   },
   "quote": {
     "eyebrow": "Request a Quote",

@@ -12,7 +12,7 @@ export function hero(ctx) {
   </picture>
   <div class="container hero__inner">
     <div class="hero__content">
-      <p class="eyebrow eyebrow--light">${esc(h.eyebrow)}</p>
+      ${h.eyebrow ? `<p class="eyebrow eyebrow--light">${esc(h.eyebrow)}</p>` : ''}
       <h1 class="hero__title" id="hero-title">${esc(h.heading)}</h1>
       <p class="hero__sub">${esc(h.subheading)}<br>${esc(h.location)}</p>
       ${button({ href: '#quote', label: h.button, arrow: true, className: 'hero__cta' })}
@@ -71,11 +71,11 @@ export function aboutSection(ctx) {
   const t = ctx.text.about;
   const areas = ctx.settings.business.areasCovered;
   return `<section class="section about" id="about" aria-labelledby="about-title">
-  <div class="container about__inner">
-    <div class="about__media">
+  <div class="container about__inner${t.image ? '' : ' about__inner--text'}">
+    ${t.image ? `    <div class="about__media">
       ${img(ctx, { src: t.image, alt: t.imageAlt, sizes: '(min-width: 1024px) 520px, 100vw' })}
       ${t.imageIsPlaceholder ? placeholderTag(ctx.text.projects.placeholderLabel) : ''}
-    </div>
+    </div>` : ''}
     <div class="about__content">
       ${sectionHeading({ eyebrow: t.eyebrow, heading: t.heading, id: 'about-title' })}
       ${t.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('\n')}
