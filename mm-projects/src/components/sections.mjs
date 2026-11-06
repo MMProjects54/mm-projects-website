@@ -91,7 +91,9 @@ export function aboutSection(ctx) {
 function siteVisitButton(ctx) {
   const { settings, text } = ctx;
   if (settings.booking.url) {
-    return button({ href: settings.booking.url, label: text.siteVisit.button, arrow: true, attrs: 'target="_blank" rel="noopener"' });
+    const cal = String(settings.booking.url).match(/^https:\/\/(?:app\.)?cal\.com\/([^?#]+)/);
+    const calAttr = cal ? ` data-cal-booking="${esc(cal[1].replace(/\/$/, ''))}"` : '';
+    return button({ href: settings.booking.url, label: text.siteVisit.button, arrow: true, attrs: `target="_blank" rel="noopener"${calAttr}` });
   }
   const tally = parseTally(settings.tally.siteVisitForm || settings.tally.enquiryForm);
   return button({ href: tally ? tally.shareUrl : '#contact', label: text.siteVisit.button, arrow: true, attrs: 'data-open-dialog="site-visit-dialog"' });
