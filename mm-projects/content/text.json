@@ -4,13 +4,14 @@
     "subheading": "Kitchens • Bathrooms • Bespoke Joinery",
     "location": "in Glasgow and surrounding areas.",
     "button": "Get a Free Quote",
-    "image": "/images/hero-kitchen-desktop.jpg",
-    "imageMobile": "/images/hero-kitchen-mobile.jpg",
+    "image": "/images/hero-logo-desktop.jpg",
+    "imageMobile": "/images/hero-logo-mobile.jpg",
     "highlights": [
       "Quality Craftsmanship",
       "High Quality Finish",
       "Tailored to You"
-    ]
+    ],
+    "imageAlt": "MM Projects house and MM logo in sage green and white"
   },
   "services": {
     "eyebrow": "Our Services",
