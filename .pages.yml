@@ -7,7 +7,7 @@
 media:
   input: mm-projects/images
   output: /images
- 
+      extensions: [jpg, jpeg, JPG, JPEG, png, PNG, webp, WEBP]
 
 content:
   # ---------------------------------------------------------------- PHOTOS
