@@ -74,7 +74,11 @@
     ],
     "formTitle": "Project enquiry form",
     "notConnected": "Preview only: the Tally form is not connected yet.",
-    "notConnectedHelp": "Add your Tally link under Business settings. Until then, please call or WhatsApp."
+    "notConnectedHelp": "Add your Tally link under Business settings. Until then, please call or WhatsApp.",
+    "formHeading": "Send us your project details",
+    "formText": "Tell us what you're planning, when you'd like to start and where you are. You can add photos of your space too.",
+    "formOpenButton": "Start your enquiry",
+    "formCloseButton": "Hide form"
   },
   "siteVisit": {
     "eyebrow": "Site Survey",

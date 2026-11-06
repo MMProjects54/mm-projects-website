@@ -79,7 +79,26 @@
     s.src = TALLY_SRC; s.async = true; s.onload = run; s.onerror = run;
     doc.body.appendChild(s);
   }
-  if (doc.querySelector('iframe[data-tally-src]')) {
+  var formPanel = doc.querySelector('[data-form-panel]');
+  if (formPanel) {
+    var formBtn = formPanel.querySelector('[data-form-toggle]');
+    var formRegion = doc.getElementById(formBtn.getAttribute('aria-controls'));
+    var setForm = function (open) {
+      formBtn.setAttribute('aria-expanded', String(open));
+      formRegion.hidden = !open;
+      formPanel.classList.toggle('is-open', open);
+      formBtn.querySelector('span').textContent = open ? formBtn.dataset.close : formBtn.dataset.open;
+      if (open) loadTally();
+    };
+    setForm(location.hash === '#quote');
+    formBtn.addEventListener('click', function () { setForm(formRegion.hidden); });
+    // Any "Get a Free Quote" / "Request a Quote" link opens the form
+    doc.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href$="#quote"]');
+      if (a) setForm(true);
+    });
+    window.addEventListener('hashchange', function () { if (location.hash === '#quote') setForm(true); });
+  } else if (doc.querySelector('iframe[data-tally-src]')) {
     var quote = doc.getElementById('quote');
     if (quote && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {

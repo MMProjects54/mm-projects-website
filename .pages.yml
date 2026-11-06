@@ -203,6 +203,10 @@ content:
                 options:
                   values: [camera, file, calendar, check, phone, mapPin, chat]
               - { name: text, label: Text, type: string }
+          - { name: formHeading, label: Enquiry box heading, type: string }
+          - { name: formText, label: Enquiry box text, type: text }
+          - { name: formOpenButton, label: Button to open the form, type: string }
+          - { name: formCloseButton, label: Button to close the form, type: string }
           - { name: formTitle, label: Form name (for screen readers), type: string }
           - { name: notConnected, label: Message if the form isn't connected, type: string }
           - { name: notConnectedHelp, label: Help text if the form isn't connected, type: string }

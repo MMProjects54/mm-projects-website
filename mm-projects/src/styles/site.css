@@ -283,6 +283,15 @@ main:focus { outline: none; }
 .tally iframe { display: block; width: 100%; border: 0; min-height: 320px; }
 /* Live Tally form: edge to edge, form's own dark background, no extra white space */
 .quote__form.quote__form--live { padding: 0; overflow: hidden; background: var(--tally-bg, var(--sage-dark)); }
+/* Enquiry form opens and closes with a button so the section stays compact */
+.form-toggle { padding: 28px; background: #38423a; color: var(--white); }
+.form-toggle__title { font-size: clamp(1.3rem, 1.1rem + 0.5vw, 1.55rem); font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+.form-toggle__text { margin-top: 8px; font-size: 14.5px; color: rgba(255, 255, 255, 0.86); max-width: 46ch; }
+.form-toggle__btn { margin-top: 20px; min-height: 46px; padding-inline: 24px; font-size: 14.5px; background: var(--white); color: var(--ink); }
+.form-toggle__btn:hover { background: var(--sage-tint); }
+.form-toggle__chevron { transition: transform 0.25s var(--ease); }
+.form-toggle__btn[aria-expanded='true'] .form-toggle__chevron { transform: rotate(180deg); }
+.form-panel[hidden] { display: none; }
 .tally--live { background: var(--tally-bg, var(--sage-dark)); border-radius: inherit; }
 .tally--live iframe { min-height: 0; background: transparent; color-scheme: normal; }
 .tally__notice { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 18px; padding: 10px 14px; border-left: 3px solid var(--sage); border-radius: 4px; background: var(--sage-tint); font-size: 13px; line-height: 1.45; color: #2f3631; }

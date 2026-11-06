@@ -110,9 +110,22 @@ export function quoteSection(ctx) {
         ${q.steps.map((s) => `<li>${icon(s.icon, { size: 22 })}<span>${esc(s.text)}</span></li>`).join('\n')}
       </ul>
     </div>
-    <div class="quote__form card${parseTally(settings.tally.enquiryForm) ? ' quote__form--live' : ''}">
+    ${parseTally(settings.tally.enquiryForm)
+      ? `<div class="quote__form card quote__form--live" data-form-panel>
+      <div class="form-toggle">
+        <h3 class="form-toggle__title">${esc(q.formHeading || 'Send us your project details')}</h3>
+        <p class="form-toggle__text">${esc(q.formText || '')}</p>
+        <button type="button" class="btn form-toggle__btn" aria-expanded="true" aria-controls="enquiry-form" data-form-toggle data-open="${esc(q.formOpenButton || 'Start your enquiry')}" data-close="${esc(q.formCloseButton || 'Hide form')}">
+          <span>${esc(q.formCloseButton || 'Hide form')}</span>${icon('chevronDown', { size: 20, className: 'form-toggle__chevron' })}
+        </button>
+      </div>
+      <div class="form-panel" id="enquiry-form">
+        ${tallyEmbed(ctx, settings.tally.enquiryForm, { title: q.formTitle })}
+      </div>
+    </div>`
+      : `<div class="quote__form card">
       ${tallyEmbed(ctx, settings.tally.enquiryForm, { title: q.formTitle })}
-    </div>
+    </div>`}
     <div class="quote__aside">
       <div class="consult card" id="site-visit">
         ${sv.image ? `<div class="consult__bg" aria-hidden="true" style="background-image:url('${esc(sv.image)}')"></div>` : ''}
