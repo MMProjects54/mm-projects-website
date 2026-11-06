@@ -315,14 +315,15 @@ main:focus { outline: none; }
 /* ---------- Reviews ---------- */
 .reviews { background: #eeeeed; }
 .reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.review-card { position: relative; display: flex; flex-direction: column; padding: 28px; border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-card); }
-.review-card__quote { color: var(--sage); margin-bottom: 12px; }
-.review-card__stars { display: flex; gap: 2px; color: #b8913a; margin-bottom: 10px; }
+/* Review cards: same dark green as the Book a Consultation box, white text */
+.review-card { position: relative; display: flex; flex-direction: column; padding: 28px; border-radius: var(--radius-lg); background: #38423a; color: var(--white); box-shadow: var(--shadow-card); }
+.review-card__quote { color: var(--sage-light); margin-bottom: 12px; }
+.review-card__stars { display: flex; gap: 2px; color: #e2c27a; margin-bottom: 10px; }
 .review-card__text { font-size: 15.5px; line-height: 1.6; flex: 1; }
 .review-card__name { margin-top: 18px; font-weight: 600; }
-.review-card__meta { font-size: 13px; color: var(--muted); }
+.review-card__meta { font-size: 13px; color: rgba(255, 255, 255, 0.75); }
 .review-card__meta a { color: inherit; }
-.review-card--placeholder { background: rgba(255, 255, 255, 0.55); box-shadow: none; border: 1.5px dashed #c3c9c3; }
+.review-card--placeholder { background: rgba(255, 255, 255, 0.55); color: var(--ink); box-shadow: none; border: 1.5px dashed #c3c9c3; }
 .review-card--placeholder .review-card__quote { color: #b9c0b9; }
 .review-card__title { font-weight: 600; font-size: 15px; }
 .review-card--placeholder .review-card__text { margin-top: 6px; font-size: 14px; color: var(--muted); }
