@@ -252,10 +252,14 @@ main:focus { outline: none; }
 /* ---------- Quote, site visit and contact ---------- */
 .quote { background: #f9f9f8; padding-block: clamp(48px, 6vw, 72px); }
 .quote__grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr) minmax(0, 1.05fr); gap: 28px; align-items: start; }
-.quote__intro .section-intro { font-size: 15px; }
-.quote__steps { display: grid; gap: 18px; margin-top: 28px; font-size: 14.5px; }
+/* Start Your Project: dark green box to match the others */
+.quote__intro { padding: 28px; border-radius: var(--radius-lg); background: #38423a; color: var(--white); box-shadow: var(--shadow-card); }
+.quote__intro .eyebrow { color: rgba(255, 255, 255, 0.78); }
+.quote__intro .section-title { color: var(--white); font-size: clamp(1.45rem, 1.2rem + 0.6vw, 1.7rem); }
+.quote__intro .section-intro { font-size: 14.5px; color: rgba(255, 255, 255, 0.86); }
+.quote__steps { display: grid; gap: 16px; margin-top: 24px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.16); font-size: 14.5px; }
 .quote__steps li { display: flex; align-items: center; gap: 14px; }
-.quote__steps .icon { color: var(--ink); }
+.quote__steps .icon { color: var(--sage-light); }
 .quote__form { padding: 24px; }
 .quote__aside { display: grid; gap: 20px; }
 
@@ -310,13 +314,13 @@ main:focus { outline: none; }
 @media (max-width: 1139px) {
   .quote__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .quote__intro { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px 48px; align-items: end; }
-  .quote__steps { margin-top: 0; }
+  .quote__steps { margin-top: 0; padding-top: 0; border-top: 0; }
 }
 @media (max-width: 760px) {
   .consult__content { max-width: 100%; }
   .quote__grid { grid-template-columns: 1fr; }
   .quote__intro { display: block; }
-  .quote__steps { margin-top: 24px; }
+  .quote__steps { margin-top: 24px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.16); }
   .quote__form { padding: 18px; }
   .fake-form { grid-template-columns: 1fr; }
   .fake-submit { justify-self: stretch; }
