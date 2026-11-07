@@ -150,6 +150,19 @@ export function quoteSection(ctx) {
 </section>`;
 }
 
+/** Checkatrade's official "Review us on Checkatrade" button (their script draws it where it sits). */
+function checkatradeButton(settings) {
+  const c = settings.checkatrade || {};
+  if (!c.uniqueName || !/^[a-z0-9_-]+$/i.test(c.uniqueName)) return '';
+  const config = { companyId: String(c.companyId || ''), uniqueName: c.uniqueName, theme: ['white', 'blue', 'red'].includes(c.theme) ? c.theme : 'white' };
+  const reviewUrl = `https://www.checkatrade.com/give-feedback/trades/${encodeURIComponent(c.uniqueName)}`;
+  return `<div class="reviews__checkatrade">
+      <script>window._checkatradeConfig = ${JSON.stringify(config).replace(/</g, '\\u003c')};</script>
+      <script src="https://www.checkatrade.com/static/js/widget.js"></script>
+      <noscript><a href="${esc(reviewUrl)}" target="_blank" rel="noopener">Review us on Checkatrade</a></noscript>
+    </div>`;
+}
+
 export function reviewsSection(ctx) {
   const t = ctx.text.reviews;
   const items = ctx.reviews.length ? ctx.reviews : [null, null, null];
@@ -162,6 +175,7 @@ export function reviewsSection(ctx) {
     <ul class="reviews__grid" role="list">
       ${items.map((r) => reviewCard(r, t)).join('\n')}
     </ul>
+    ${checkatradeButton(ctx.settings)}
   </div>
 </section>`;
 }

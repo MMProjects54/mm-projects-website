@@ -50,6 +50,7 @@
         "Tally, which provides our online enquiry forms and stores what you submit",
         "TradieHQ, which we use to prepare quotations",
         "Cal.com, which handles site survey bookings",
+        "Checkatrade, whose \"Review us\" button is loaded from their website",
         "Netlify, which hosts this website",
         "WhatsApp, if you choose to message us there"
       ],

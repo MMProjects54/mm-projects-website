@@ -49,5 +49,10 @@
     "servicesTitle": "Our Services: Kitchens, Bathrooms & Bespoke Joinery in Glasgow | MM Projects",
     "servicesDescription": "Kitchen fitting, bathroom renovations, bespoke joinery, fitted wardrobes, flooring and doors across Glasgow and surrounding areas, from MM Projects.",
     "shareImage": "/images/hero-kitchen-desktop.jpg"
+  },
+  "checkatrade": {
+    "uniqueName": "mmprojectsuk",
+    "companyId": "15016106",
+    "theme": "white"
   }
 }

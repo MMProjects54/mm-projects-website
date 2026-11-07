@@ -336,6 +336,18 @@ content:
         fields:
           - { name: url, label: Booking link, description: "e.g. a Calendly link. Leave empty to use the Tally form.", type: string }
       - { name: reviewsLink, label: Google review link (optional), description: Shows a "Leave us a review" link., type: string }
+      - name: checkatrade
+        label: Checkatrade button
+        description: The "Review us on Checkatrade" button under your reviews. Leave Unique name empty to hide it.
+        type: object
+        fields:
+          - { name: uniqueName, label: Checkatrade unique name, description: e.g. mmprojectsuk, type: string }
+          - { name: companyId, label: Checkatrade company ID, description: e.g. 15016106, type: string }
+          - name: theme
+            label: Button colour
+            type: select
+            options:
+              values: [white, blue, red]
       - name: business
         label: Business
         type: object
