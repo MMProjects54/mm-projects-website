@@ -6,19 +6,13 @@ import { button, sectionHeading, img, serviceCard, galleryTile, beforeAfter, rev
 export function hero(ctx) {
   const h = ctx.text.hero;
   return `<section class="hero" id="top" aria-labelledby="hero-title">
-  <picture class="hero__media">
-    <source media="(max-width: 640px)" srcset="${esc(h.imageMobile)}" ${dims(ctx, h.imageMobile)}>
-    ${img(ctx, { src: h.image, alt: h.imageAlt, className: 'hero__img', eager: true })}
-  </picture>
   <div class="container hero__inner">
     <div class="hero__content">
       ${h.eyebrow ? `<p class="eyebrow eyebrow--light">${esc(h.eyebrow)}</p>` : ''}
       <h1 class="hero__title" id="hero-title">${esc(h.heading)}</h1>
-      <p class="hero__sub">${esc(h.subheading)}<br>${esc(h.location)}</p>
+      <p class="hero__sub">${esc(h.subheading)}</p>
+      ${h.location ? `<p class="hero__location">${esc(h.location)}</p>` : ''}
       ${button({ href: '#quote', label: h.button, arrow: true, className: 'hero__cta' })}
-      <ul class="hero__highlights" role="list">
-        ${h.highlights.map((x) => `<li>${icon('check', { size: 18 })}<span>${esc(x)}</span></li>`).join('')}
-      </ul>
     </div>
   </div>
 </section>`;

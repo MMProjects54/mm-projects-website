@@ -138,16 +138,6 @@ content:
           - { name: subheading, label: Services line, type: string }
           - { name: location, label: Location line, type: string }
           - { name: button, label: Button text, type: string }
-          - name: image
-            label: Main photo (desktop)
-            description: A wide landscape photo, about 2000px wide.
-            type: image
-          - name: imageMobile
-            label: Main photo (phones)
-            description: A less wide crop of the same photo, about 1000px wide.
-            type: image
-          - { name: imageAlt, label: Photo description, type: string }
-          - { name: highlights, label: Ticks under the button, type: string, list: true }
       - name: services
         label: Our Services section
         type: object

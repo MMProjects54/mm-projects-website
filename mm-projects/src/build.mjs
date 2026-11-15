@@ -32,7 +32,6 @@ const list = (x) => (Array.isArray(x) ? x : []);
 function normalise({ settings, text, services, projects, reviews, privacy }) {
   settings.business.areasCovered = list(settings.business.areasCovered).filter(Boolean);
   text.nav = list(text.nav);
-  text.hero.highlights = list(text.hero.highlights).filter(Boolean);
   text.services.mobileShowCount = Number(text.services.mobileShowCount) || 4;
   text.about.paragraphs = list(text.about.paragraphs).filter(Boolean);
   text.about.points = list(text.about.points);
@@ -120,7 +119,7 @@ async function build() {
     }
   }
   const referenced = [
-    settings.logo.mark, text.hero.image, text.hero.imageMobile, text.about.image, text.siteVisit.image,
+    settings.logo.mark, text.about.image, text.siteVisit.image,
     ...services.map((s) => s.image),
     ...projects.gallery.map((p) => p.image),
     ...projects.beforeAfter.flatMap((p) => [p.before, p.after]),

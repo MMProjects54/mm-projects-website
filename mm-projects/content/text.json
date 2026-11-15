@@ -1,17 +1,9 @@
 {
   "hero": {
-    "heading": "Home Improvements & Property Renovations",
+    "heading": "Home Improvements & Renovations",
     "subheading": "Kitchens • Bathrooms • Bespoke Joinery",
-    "location": "in Glasgow and surrounding areas.",
-    "button": "Get a Free Quote",
-    "image": "/images/hero-logo-desktop.jpg",
-    "imageMobile": "/images/hero-logo-mobile.jpg",
-    "highlights": [
-      "Quality Craftsmanship",
-      "High Quality Finish",
-      "Tailored to You"
-    ],
-    "imageAlt": "MM Projects house and MM logo in sage green and white"
+    "location": "Glasgow & surrounding areas",
+    "button": "Get a Free Quote"
   },
   "services": {
     "eyebrow": "Our Services",
