@@ -1,6 +1,6 @@
 {
   "title": "Privacy Notice",
-  "lastUpdated": "27 October 2026",
+  "lastUpdated": "15 November 2026",
   "intro": "This notice explains how {business} collects and uses personal information when you visit this website, send us an enquiry or ask us to arrange a site visit.",
   "sections": [
     {
@@ -48,10 +48,11 @@
       ],
       "list": [
         "Tally, which provides our online enquiry forms and stores what you submit",
+        "Supabase, which securely stores enquiries, any photos you send and our business records in a private system only our staff can log in to (data stored in the EU, in Ireland)",
         "TradieHQ, which we use to prepare quotations",
         "Cal.com, which handles site survey bookings",
         "Checkatrade, whose \"Review us\" button is loaded from their website",
-        "Netlify, which hosts this website",
+        "Netlify, which hosts this website and our private staff system",
         "WhatsApp, if you choose to message us there"
       ],
       "after": [
