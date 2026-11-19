@@ -148,7 +148,7 @@ export function documentShell(ctx, { title, description, path, body, noindex = f
 <meta name="description" content="${esc(description)}">
 ${noindex ? '<meta name="robots" content="noindex">' : ''}
 ${url ? `<link rel="canonical" href="${esc(url)}">` : ''}
-<meta name="theme-color" content="${esc(settings.brand.charcoal)}">
+<meta name="theme-color" content="${esc(settings.brand.background)}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${esc(settings.business.name)}">
 <meta property="og:title" content="${esc(title)}">

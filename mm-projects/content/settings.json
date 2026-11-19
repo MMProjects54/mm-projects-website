@@ -32,16 +32,19 @@
     "alt": "MM Projects logo"
   },
   "brand": {
-    "charcoal": "#1c211d",
-    "charcoalSoft": "#262e29",
-    "charcoalLine": "#323a35",
+    "background": "#121513",
+    "backgroundAlt": "#171b18",
+    "surface": "#1e2420",
+    "surfaceRaised": "#252c27",
+    "border": "rgba(255, 255, 255, 0.08)",
+    "borderStrong": "rgba(255, 255, 255, 0.16)",
+    "footerBar": "#0e110f",
     "sage": "#647464",
-    "sageDark": "#536253",
-    "sageLight": "#a9b3aa",
-    "sageTint": "#e9ede8",
-    "paper": "#f6f6f5",
-    "ink": "#161a17",
-    "muted": "#5d635f"
+    "sageHover": "#718271",
+    "sageText": "#a9bba9",
+    "sageTint": "rgba(132, 151, 132, 0.14)",
+    "text": "#f3f5f2",
+    "muted": "#a7afa8"
   },
   "seo": {
     "homeTitle": "Kitchen Fitting, Bathroom Renovations & Joinery in Glasgow | MM Projects",

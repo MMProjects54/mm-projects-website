@@ -355,18 +355,21 @@ content:
           - { name: alt, label: Logo description, type: string }
       - name: brand
         label: Brand colours
-        description: "Colour codes like #647464"
+        description: "Colour codes like #647464. These match the MM Projects admin dashboard."
         type: object
         fields:
-          - { name: charcoal, label: Header and hero background, type: string }
-          - { name: charcoalSoft, label: Projects section and footer, type: string }
-          - { name: charcoalLine, label: Footer bottom bar, type: string }
-          - { name: sage, label: Buttons, type: string }
-          - { name: sageDark, label: Button hover, type: string }
-          - { name: sageLight, label: Light accents on dark backgrounds, type: string }
-          - { name: sageTint, label: Pale highlights, type: string }
-          - { name: paper, label: Light section background, type: string }
-          - { name: ink, label: Main text, type: string }
+          - { name: background, label: Page background (dark charcoal), type: string }
+          - { name: backgroundAlt, label: Alternate section background, type: string }
+          - { name: surface, label: Cards, type: string }
+          - { name: surfaceRaised, label: Cards when hovered, type: string }
+          - { name: border, label: Subtle borders, type: string }
+          - { name: borderStrong, label: Stronger borders (buttons and inputs), type: string }
+          - { name: footerBar, label: Footer bottom bar, type: string }
+          - { name: sage, label: Buttons (sage green), type: string }
+          - { name: sageHover, label: Button hover, type: string }
+          - { name: sageText, label: Green accent text, type: string }
+          - { name: sageTint, label: Soft green highlight, type: string }
+          - { name: text, label: Main text, type: string }
           - { name: muted, label: Secondary text, type: string }
       - name: seo
         label: Google search

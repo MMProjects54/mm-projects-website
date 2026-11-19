@@ -38,26 +38,33 @@ export function servicesSection(ctx) {
 
 export function projectsSection(ctx) {
   const t = ctx.text.projects;
-  const { gallery, beforeAfter: pairs } = ctx.projects;
+  const { gallery } = ctx.projects;
   const insta = ctx.settings.social.instagram;
   return `<section class="section projects" id="projects" aria-labelledby="projects-title">
   <div class="container">
     <div class="section-head">
-      ${sectionHeading({ eyebrow: t.eyebrow, heading: t.heading, intro: t.intro, id: 'projects-title', className: 'on-dark' })}
+      ${sectionHeading({ eyebrow: t.eyebrow, heading: t.heading, intro: t.intro, id: 'projects-title' })}
       ${insta ? `<a class="text-link text-link--light section-head__link" href="${esc(insta)}" target="_blank" rel="noopener">${esc(t.viewMore)}${icon('arrowRight', { size: 16 })}</a>` : ''}
     </div>
     <ul class="gallery" role="list" data-gallery>
       ${gallery.map((p, i) => galleryTile(ctx, p, i, t.placeholderLabel)).join('\n')}
     </ul>
-    ${pairs.length ? `<div class="before-after">
-      <div class="before-after__intro">
-        <h3>${esc(t.beforeAfterHeading)}</h3>
-        <p>${esc(t.beforeAfterIntro)}</p>
-      </div>
-      <div class="before-after__list">${pairs.map((p) => beforeAfter(ctx, p, t.placeholderLabel)).join('\n')}</div>
-    </div>` : ''}
   </div>
   <script type="application/json" id="gallery-data">${JSON.stringify(gallery.map((p) => ({ src: p.image, alt: p.alt, caption: [p.title, p.location].filter(Boolean).join(' · ') + (p.placeholder ? ` (${t.placeholderLabel})` : '') }))).replace(/</g, '\\u003c')}</script>
+</section>`;
+}
+
+export function beforeAfterSection(ctx) {
+  const t = ctx.text.projects;
+  const pairs = ctx.projects.beforeAfter;
+  if (!pairs.length) return '';
+  return `<section class="section before-after-section" id="before-after" aria-labelledby="before-after-title">
+  <div class="container before-after">
+    <div class="before-after__intro">
+      ${sectionHeading({ eyebrow: t.beforeAfterEyebrow, heading: t.beforeAfterHeading, intro: t.beforeAfterIntro, id: 'before-after-title' })}
+    </div>
+    <div class="before-after__list">${pairs.map((p) => beforeAfter(ctx, p, t.placeholderLabel)).join('\n')}</div>
+  </div>
 </section>`;
 }
 

@@ -3,7 +3,7 @@ import { esc, fill } from './lib/html.mjs';
 import { icon } from './lib/icons.mjs';
 import { documentShell } from './components/layout.mjs';
 import { button, sectionHeading, img } from './components/ui.mjs';
-import { hero, servicesSection, projectsSection, aboutSection, quoteSection, reviewsSection } from './components/sections.mjs';
+import { hero, servicesSection, projectsSection, beforeAfterSection, aboutSection, quoteSection, reviewsSection } from './components/sections.mjs';
 
 export function homePage(ctx) {
   const { settings } = ctx;
@@ -11,7 +11,7 @@ export function homePage(ctx) {
     title: settings.seo.homeTitle,
     description: settings.seo.homeDescription,
     path: '',
-    body: [hero(ctx), servicesSection(ctx), projectsSection(ctx), aboutSection(ctx), quoteSection(ctx), reviewsSection(ctx)].join('\n'),
+    body: [hero(ctx), quoteSection(ctx), projectsSection(ctx), beforeAfterSection(ctx), servicesSection(ctx), reviewsSection(ctx), aboutSection(ctx)].filter(Boolean).join('\n'),
   });
 }
 
