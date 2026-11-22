@@ -113,7 +113,10 @@ async function build() {
   const design = JSON.parse(await readFile(join(ROOT, 'content/design.json'), 'utf8'));
   const studioFiles = (await readdir(join(ROOT, 'content/studios')).catch(() => [])).filter((f) => f.endsWith('.json')).sort();
   const studios = [];
-  for (const f of studioFiles) studios.push(JSON.parse(await readFile(join(ROOT, 'content/studios', f), 'utf8')));
+  for (const f of studioFiles) {
+    const data = JSON.parse(await readFile(join(ROOT, 'content/studios', f), 'utf8'));
+    if (Array.isArray(data.steps)) studios.push(data); // skips helper files such as the image-number lists
+  }
 
   // ---- image sizes + missing-image check
   const imageSizes = {};
