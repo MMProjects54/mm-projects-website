@@ -73,15 +73,15 @@
               "id": "keep",
               "label": "Keep the existing layout",
               "desc": "Everything stays where it is",
-              "shot": "edit:room",
-              "prompt": "Show this bathroom as an architect's top-down floor plan drawing in soft grey lines on white paper, with the shower, vanity and toilet in their current places and a small 'same layout' tick in sage green. No text other than room labels."
+              "shot": "new",
+              "prompt": "Top-down photograph of an architect's floor plan drawing of a small bathroom on white paper on a light oak desk, soft grey lines, the shower, vanity and toilet drawn in their places, a sage green pencil tick beside it, a pencil and a tile sample at the edge."
             },
             {
               "id": "change",
               "label": "Change the layout",
               "desc": "Move the bath, shower or toilet",
-              "shot": "edit:room",
-              "prompt": "Show this bathroom as an architect's top-down floor plan drawing in soft grey lines on white paper, with dashed arrows showing the shower and vanity swapping places. No text other than room labels."
+              "shot": "new",
+              "prompt": "Top-down photograph of an architect's floor plan drawing of a small bathroom on white paper on a light oak desk, soft grey lines, with dashed sage green arrows showing the shower and vanity swapping places, a pencil and a tile sample at the edge."
             },
             {
               "id": "not_sure",
