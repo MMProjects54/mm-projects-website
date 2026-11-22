@@ -5,7 +5,7 @@
     "location": "Glasgow & surrounding areas",
     "button": "Get a Free Quote",
     "image": "images/hero-bathroom.jpg",
-    "imageDesktop": ""
+    "imageDesktop": "images/hero-bathroom-desktop.jpg"
   },
   "services": {
     "eyebrow": "Our Services",
