@@ -3,6 +3,7 @@ import { esc, fill } from './lib/html.mjs';
 import { icon } from './lib/icons.mjs';
 import { documentShell } from './components/layout.mjs';
 import { button, sectionHeading, img } from './components/ui.mjs';
+import { studioTeaser, designLandingBody, studioBody } from './components/studio.mjs';
 import { hero, servicesSection, projectsSection, beforeAfterSection, aboutSection, quoteSection, reviewsSection } from './components/sections.mjs';
 
 export function homePage(ctx) {
@@ -11,7 +12,7 @@ export function homePage(ctx) {
     title: settings.seo.homeTitle,
     description: settings.seo.homeDescription,
     path: '',
-    body: [hero(ctx), quoteSection(ctx), projectsSection(ctx), beforeAfterSection(ctx), servicesSection(ctx), reviewsSection(ctx), aboutSection(ctx)].filter(Boolean).join('\n'),
+    body: [hero(ctx), studioTeaser(ctx), quoteSection(ctx), projectsSection(ctx), beforeAfterSection(ctx), servicesSection(ctx), reviewsSection(ctx), aboutSection(ctx)].filter(Boolean).join('\n'),
   });
 }
 
@@ -90,5 +91,22 @@ export function notFoundPage(ctx) {
     noindex: true,
     body: `${pageBanner({ heading: 'Page not found', intro: 'Sorry, that page does not exist or has moved.' })}
 <div class="section"><div class="container">${button({ href: 'index.html', label: 'Back to the homepage', arrow: true })}</div></div>`,
+  });
+}
+
+export function designLandingPage(ctx) {
+  const t = ctx.design.landing;
+  return documentShell(ctx, { title: t.seoTitle, description: t.seoDescription, path: 'design/', body: designLandingBody(ctx), noindex: ctx.studioPreview });
+}
+
+export function studioPage(ctx, studio) {
+  const body = studioBody(ctx, studio);
+  return documentShell(ctx, {
+    title: `${studio.name} | MM Projects`,
+    description: studio.intro,
+    path: `design/${studio.id}/`,
+    body,
+    noindex: ctx.studioPreview,
+    scripts: `<script src="assets/studio.js?v=${ctx.version}" defer></script>`,
   });
 }

@@ -135,7 +135,7 @@ function structuredData(ctx) {
   return `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
 }
 
-export function documentShell(ctx, { title, description, path, body, noindex = false }) {
+export function documentShell(ctx, { title, description, path, body, noindex = false, scripts = '' }) {
   const { settings } = ctx;
   const url = settings.siteUrl ? `${settings.siteUrl}/${path}` : '';
   const shareImg = settings.siteUrl ? `${settings.siteUrl}/${settings.seo.shareImage}` : '';
@@ -144,6 +144,7 @@ export function documentShell(ctx, { title, description, path, body, noindex = f
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+${path.includes('/') ? '<base href="/">' : ''}
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 ${noindex ? '<meta name="robots" content="noindex">' : ''}
@@ -166,9 +167,10 @@ ${shareImg ? `<meta property="og:image" content="${esc(shareImg)}">` : ''}
 <link rel="stylesheet" href="assets/site.css?v=${ctx.version}">
 ${ctx.page === 'home' ? structuredData(ctx) : ''}
 <script src="assets/site.js?v=${ctx.version}" defer></script>
+${scripts}
 </head>
 <body class="page-${ctx.page}">
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="${path.includes('/') ? path : ''}#main">Skip to content</a>
 ${header(ctx)}
 <main id="main" tabindex="-1">
 ${body}

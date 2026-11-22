@@ -1,0 +1,279 @@
+{
+  "id": "bathroom",
+  "name": "Bathroom Design Studio",
+  "short": "Bathroom",
+  "intro": "Design your new bathroom in 10 simple steps. Choose your layout, style, finishes and fittings, then send your design to us for a free, no-obligation quotation.",
+  "imageCredit": "Images illustrate design options and are not photographs of MM Projects' own work.",
+  "shots": {
+    "style": "Photorealistic interior photograph of a premium UK home bathroom. Soft natural daylight, warm neutral palette, eye-level camera, sharp focus, high-end interior design magazine quality. No people, no text, no logos, no brand names. Portrait 2:3.",
+    "bases": {
+      "room": "A medium-sized modern UK family bathroom (about 2.4 m by 2.2 m) seen from the doorway: large light grey stone-effect porcelain tiles, a walk-in shower with a frameless glass screen on the left, a floating light oak wall-hung vanity with a white basin in the centre, a round mirror above, a wall-hung toilet on the right, chrome fittings, a frosted window. Clean, calm, uncluttered.",
+      "wall": "Close-up of a bathroom shower wall, straight on, filling the frame: tiles from floor to ceiling, a recessed shower niche at chest height with two neutral toiletry bottles, a slim chrome shower valve at the bottom right. Soft daylight from the left.",
+      "floor": "Close-up of a bathroom floor seen from above at a gentle angle, filling the frame, with the bottom of a light oak wall-hung vanity and a white bath mat at the top edge. Soft daylight.",
+      "vanity": "Close-up of the vanity area, straight on: a wall-hung vanity unit with two drawers below a white basin, a tap, a round mirror above, light grey stone-effect wall tiles behind. Soft daylight.",
+      "tap": "Close-up of a modern single-lever basin tap on a white countertop basin, a light oak vanity top and light grey stone-effect tiles softly blurred behind. Soft daylight, crisp reflections on the metal."
+    }
+  },
+  "steps": [
+    {
+      "id": "type",
+      "title": "What kind of bathroom?",
+      "intro": "Start with the room you're planning.",
+      "questions": [
+        {
+          "id": "room_type", "label": "Bathroom type", "type": "single", "required": true,
+          "options": [
+            { "id": "full", "label": "Full bathroom", "desc": "Main family bathroom", "shot": "new", "prompt": "A spacious main family bathroom with a bath, a separate walk-in shower, a vanity and a toilet." },
+            { "id": "ensuite", "label": "En suite", "desc": "Off a bedroom", "shot": "new", "prompt": "A compact en suite bathroom seen through an open door from a bedroom, with a walk-in shower, a small vanity and a toilet." },
+            { "id": "cloakroom", "label": "Cloakroom", "desc": "Toilet and small basin", "shot": "new", "prompt": "A small downstairs cloakroom with a wall-hung toilet and a compact corner basin, with a feature tiled wall." },
+            { "id": "refresh", "label": "Bathroom refresh", "desc": "Update without a full refit", "shot": "new", "prompt": "An existing bathroom being refreshed: new vanity, new mirror and freshly tiled splashback, bath kept in place, bright and tidy." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "title": "Your layout",
+      "intro": "Moving the toilet, bath or shower is usually the biggest part of the cost, so it helps to know early.",
+      "questions": [
+        {
+          "id": "layout", "label": "Layout", "type": "single", "required": true,
+          "options": [
+            { "id": "keep", "label": "Keep the existing layout", "desc": "Everything stays where it is", "shot": "edit:room", "prompt": "Show this bathroom as an architect's top-down floor plan drawing in soft grey lines on white paper, with the shower, vanity and toilet in their current places and a small 'same layout' tick in sage green. No text other than room labels." },
+            { "id": "change", "label": "Change the layout", "desc": "Move the bath, shower or toilet", "shot": "edit:room", "prompt": "Show this bathroom as an architect's top-down floor plan drawing in soft grey lines on white paper, with dashed arrows showing the shower and vanity swapping places. No text other than room labels." },
+            { "id": "not_sure", "label": "Not sure yet", "desc": "We'll advise at the survey", "shot": "new", "prompt": "A designer's desk with a sketched bathroom floor plan, tile samples, a tape measure and a pencil, top-down view, soft daylight." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bath_shower",
+      "title": "Bath and shower",
+      "intro": "Choose what you'd like to wash in.",
+      "questions": [
+        {
+          "id": "bath_shower", "label": "Bath and shower", "type": "single", "required": true,
+          "options": [
+            { "id": "walk_in", "label": "Walk-in shower", "desc": "Open, level and easy to clean", "shot": "base:room", "prompt": "Use the base bathroom exactly as described." },
+            { "id": "enclosure", "label": "Shower enclosure", "desc": "Fully enclosed with a door", "shot": "edit:room", "prompt": "Keep everything identical. Replace only the walk-in shower with a square shower enclosure with a hinged glass door and a low shower tray." },
+            { "id": "bath", "label": "Bath only", "desc": "A relaxing soak, no shower", "shot": "edit:room", "prompt": "Keep everything identical. Replace only the walk-in shower with a white built-in bath with a tiled bath panel, no shower." },
+            { "id": "shower_bath", "label": "Shower over bath", "desc": "Space-saving all-in-one", "shot": "edit:room", "prompt": "Keep everything identical. Replace only the walk-in shower with a white built-in bath with a fixed glass bath screen and an overhead rainfall shower above it." },
+            { "id": "separate", "label": "Separate bath and shower", "desc": "The best of both", "shot": "edit:room", "prompt": "Keep everything identical but show a slightly wider room: a freestanding white bath on the right and the walk-in shower on the left." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style",
+      "title": "Your style",
+      "intro": "Pick the look that feels most like you.",
+      "questions": [
+        {
+          "id": "style", "label": "Style", "type": "single", "required": true,
+          "options": [
+            { "id": "modern", "label": "Modern", "desc": "Clean lines, large tiles", "shot": "edit:room", "prompt": "Keep the same room shape and camera. Restyle as a crisp modern bathroom: large matt white and grey tiles, handleless white vanity, matt black fittings." },
+            { "id": "traditional", "label": "Traditional", "desc": "Classic and timeless", "shot": "edit:room", "prompt": "Keep the same room shape and camera. Restyle as a traditional bathroom: white metro tiles, wood panelling painted soft grey, a freestanding roll-top bath, a period basin on legs, chrome cross-head taps." },
+            { "id": "luxury", "label": "Contemporary luxury", "desc": "Rich materials and warm lighting", "shot": "edit:room", "prompt": "Keep the same room shape and camera. Restyle as a contemporary luxury bathroom: large marble-effect tiles, dark walnut vanity, brushed brass fittings, warm LED strip lighting in the niche and under the vanity." },
+            { "id": "minimalist", "label": "Minimalist", "desc": "Calm, simple and uncluttered", "shot": "edit:room", "prompt": "Keep the same room shape and camera. Restyle as a minimalist bathroom: warm white microcement-look walls, a simple floating vanity, hidden storage, almost no visible accessories." },
+            { "id": "not_sure", "label": "Not sure yet", "desc": "Help me decide", "shot": "new", "prompt": "A bathroom mood board on a light wooden table: tile samples in grey, white and sage, a brass tap sample, a small oak offcut and a sketch, top-down, soft daylight." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "walls",
+      "title": "Wall finishes",
+      "intro": "Choose how the walls are finished, then the tile style and colour.",
+      "questions": [
+        {
+          "id": "wall_finish", "label": "Wall finish", "type": "single", "required": true,
+          "options": [
+            { "id": "fully_tiled", "label": "Fully tiled", "desc": "Floor to ceiling", "shot": "base:room", "prompt": "Use the base bathroom exactly as described." },
+            { "id": "half_tiled", "label": "Half tiled", "desc": "Tiles to about waist height, paint above", "shot": "edit:room", "prompt": "Keep everything identical. Tile only up to about 1.2 m on the walls outside the shower, with soft warm white paint above." },
+            { "id": "wetwall", "label": "Wet wall panels", "desc": "Waterproof panels, no grout", "shot": "edit:room", "prompt": "Keep everything identical. Replace the tiles in the shower and behind the vanity with large seamless grey stone-effect waterproof wall panels with no grout lines and thin aluminium trims." },
+            { "id": "painted", "label": "Painted walls", "desc": "Tiles in wet areas only", "shot": "edit:room", "prompt": "Keep everything identical. Tile only inside the shower; paint all other walls soft warm white." }
+          ]
+        },
+        {
+          "id": "tile_style", "label": "Tile style", "type": "single", "required": true,
+          "showIf": { "q": "wall_finish", "in": ["fully_tiled", "half_tiled", "painted"] },
+          "options": [
+            { "id": "large_format", "label": "Large format", "desc": "Big tiles, fewer grout lines", "shot": "base:wall", "prompt": "Use the base wall with large 60 by 120 cm light grey stone-effect porcelain tiles." },
+            { "id": "metro", "label": "Metro", "desc": "Classic brick-bond tiles", "shot": "edit:wall", "prompt": "Keep everything identical. Change only the tiles to white gloss metro tiles in a brick bond with thin grey grout." },
+            { "id": "marble", "label": "Marble effect", "desc": "Elegant veining", "shot": "edit:wall", "prompt": "Keep everything identical. Change only the tiles to large white marble-effect porcelain tiles with soft grey veining." },
+            { "id": "stone", "label": "Stone effect", "desc": "Natural textured look", "shot": "edit:wall", "prompt": "Keep everything identical. Change only the tiles to warm beige textured stone-effect tiles." },
+            { "id": "terrazzo", "label": "Terrazzo", "desc": "Speckled and playful", "shot": "edit:wall", "prompt": "Keep everything identical. Change only the tiles to light terrazzo tiles with small grey and terracotta chips." },
+            { "id": "zellige", "label": "Zellige", "desc": "Handmade, glossy and uneven", "shot": "edit:wall", "prompt": "Keep everything identical. Change only the tiles to small handmade glossy zellige-style tiles in soft sage green with slightly uneven surfaces." },
+            { "id": "pattern", "label": "Patterned", "desc": "A feature wall", "shot": "edit:wall", "prompt": "Keep everything identical. Change only the tiles to grey and white geometric patterned tiles." }
+          ]
+        },
+        {
+          "id": "wall_colour", "label": "Colour", "type": "single", "required": true,
+          "showIf": { "q": "wall_finish", "in": ["fully_tiled", "half_tiled", "painted", "wetwall"] },
+          "options": [
+            { "id": "white", "label": "White", "shot": "colour:wall", "prompt": "Keep everything identical. Change only the tile colour to bright white." },
+            { "id": "light_grey", "label": "Light grey", "shot": "base:wall", "prompt": "Use the base wall (light grey)." },
+            { "id": "charcoal", "label": "Charcoal", "shot": "colour:wall", "prompt": "Keep everything identical. Change only the tile colour to deep charcoal grey." },
+            { "id": "warm_stone", "label": "Warm stone", "shot": "colour:wall", "prompt": "Keep everything identical. Change only the tile colour to warm beige stone." },
+            { "id": "sage", "label": "Sage green", "shot": "colour:wall", "prompt": "Keep everything identical. Change only the tile colour to soft sage green." },
+            { "id": "blue", "label": "Soft blue", "shot": "colour:wall", "prompt": "Keep everything identical. Change only the tile colour to muted dusty blue." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flooring",
+      "title": "Flooring",
+      "intro": "Choose the floor type and colour.",
+      "questions": [
+        {
+          "id": "floor_type", "label": "Floor type", "type": "single", "required": true,
+          "options": [
+            { "id": "porcelain", "label": "Porcelain tiles", "desc": "Hard-wearing, premium", "shot": "base:floor", "prompt": "Use the base floor with large light grey porcelain tiles." },
+            { "id": "ceramic", "label": "Ceramic tiles", "desc": "Great value, many patterns", "shot": "edit:floor", "prompt": "Keep everything identical. Change only the floor to smaller 30 cm square ceramic tiles in light grey with visible grout lines." },
+            { "id": "lvt", "label": "LVT", "desc": "Luxury vinyl tiles, warm underfoot", "shot": "edit:floor", "prompt": "Keep everything identical. Change only the floor to luxury vinyl planks in a natural light oak wood effect." },
+            { "id": "vinyl", "label": "Vinyl", "desc": "Budget-friendly, seamless", "shot": "edit:floor", "prompt": "Keep everything identical. Change only the floor to seamless sheet vinyl in a soft grey stone effect." }
+          ]
+        },
+        {
+          "id": "floor_colour", "label": "Floor colour", "type": "single", "required": true,
+          "options": [
+            { "id": "light_grey", "label": "Light grey", "shot": "base:floor", "prompt": "Use the base floor (light grey)." },
+            { "id": "dark_grey", "label": "Dark grey", "shot": "colour:floor", "prompt": "Keep everything identical. Change only the floor colour to dark grey." },
+            { "id": "warm_oak", "label": "Warm oak", "shot": "colour:floor", "prompt": "Keep everything identical. Change only the floor to a warm oak wood-effect finish." },
+            { "id": "stone", "label": "Stone beige", "shot": "colour:floor", "prompt": "Keep everything identical. Change only the floor colour to warm beige stone." },
+            { "id": "marble", "label": "White marble effect", "shot": "colour:floor", "prompt": "Keep everything identical. Change only the floor to white marble effect with soft grey veining." },
+            { "id": "black", "label": "Black", "shot": "colour:floor", "prompt": "Keep everything identical. Change only the floor colour to matt black." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vanity",
+      "title": "Vanity and furniture",
+      "intro": "Choose your vanity unit, basin, furniture colour and any extra storage.",
+      "questions": [
+        {
+          "id": "vanity_type", "label": "Vanity unit", "type": "single", "required": true,
+          "options": [
+            { "id": "wall_hung", "label": "Wall-hung", "desc": "Floating, shows off the floor", "shot": "base:vanity", "prompt": "Use the base vanity with a light oak wall-hung unit." },
+            { "id": "floor_standing", "label": "Floor-standing", "desc": "Extra storage, sits on the floor", "shot": "edit:vanity", "prompt": "Keep everything identical. Change only the vanity to a floor-standing unit with two doors that sits on the floor." },
+            { "id": "double", "label": "Double vanity", "desc": "Two basins, side by side", "shot": "edit:vanity", "prompt": "Keep everything identical but widen the view: a wide wall-hung vanity with two basins and two taps, two round mirrors." },
+            { "id": "none", "label": "No vanity", "desc": "Pedestal or wall-mounted basin", "shot": "edit:vanity", "prompt": "Keep everything identical. Remove the vanity and show a white wall-mounted basin with the waste pipe neatly visible below." }
+          ]
+        },
+        {
+          "id": "basin", "label": "Basin", "type": "single", "required": true,
+          "options": [
+            { "id": "countertop", "label": "Countertop", "desc": "Sits on top of the unit", "shot": "edit:vanity", "prompt": "Keep everything identical. Change only the basin to a round white countertop basin sitting on top of the vanity." },
+            { "id": "inset", "label": "Inset", "desc": "Set into the worktop", "shot": "base:vanity", "prompt": "Use the base vanity with an inset white basin." },
+            { "id": "integrated", "label": "Integrated", "desc": "One seamless basin and top", "shot": "edit:vanity", "prompt": "Keep everything identical. Change only the basin to a seamless integrated white basin and vanity top in one piece." },
+            { "id": "semi_recessed", "label": "Semi-recessed", "desc": "Overhangs the front, saves space", "shot": "edit:vanity", "prompt": "Keep everything identical. Change only the basin to a semi-recessed white basin that overhangs the front of a slimmer vanity." }
+          ]
+        },
+        {
+          "id": "furniture_colour", "label": "Furniture colour", "type": "single", "required": true,
+          "showIf": { "q": "vanity_type", "notIn": ["none"] },
+          "options": [
+            { "id": "light_oak", "label": "Light oak", "shot": "base:vanity", "prompt": "Use the base vanity (light oak)." },
+            { "id": "walnut", "label": "Walnut", "shot": "colour:vanity", "prompt": "Keep everything identical. Change only the vanity to dark walnut wood." },
+            { "id": "white", "label": "Matt white", "shot": "colour:vanity", "prompt": "Keep everything identical. Change only the vanity colour to matt white." },
+            { "id": "grey", "label": "Dove grey", "shot": "colour:vanity", "prompt": "Keep everything identical. Change only the vanity colour to soft matt dove grey." },
+            { "id": "sage", "label": "Sage green", "shot": "colour:vanity", "prompt": "Keep everything identical. Change only the vanity colour to matt sage green." },
+            { "id": "navy", "label": "Navy", "shot": "colour:vanity", "prompt": "Keep everything identical. Change only the vanity colour to matt navy blue." },
+            { "id": "charcoal", "label": "Charcoal", "shot": "colour:vanity", "prompt": "Keep everything identical. Change only the vanity colour to matt charcoal." }
+          ]
+        },
+        {
+          "id": "storage", "label": "Extra storage", "type": "multi", "required": false, "hint": "Choose any",
+          "options": [
+            { "id": "tall_unit", "label": "Tall unit", "desc": "Floor-to-ceiling cupboard", "shot": "edit:room", "prompt": "Keep everything identical. Add a slim tall light oak storage cupboard beside the vanity." },
+            { "id": "mirror_cabinet", "label": "Mirror cabinet", "desc": "Hidden storage behind the mirror", "shot": "edit:vanity", "prompt": "Keep everything identical. Replace the round mirror with a rectangular mirrored wall cabinet, one door slightly open showing toiletries." },
+            { "id": "shelving", "label": "Open shelving", "desc": "Display towels and plants", "shot": "edit:vanity", "prompt": "Keep everything identical. Add two floating light oak shelves to the side with rolled towels and a small plant." },
+            { "id": "recess", "label": "Built-in recess", "desc": "Shelving built into the wall", "shot": "edit:room", "prompt": "Keep everything identical. Add a tiled built-in wall recess with glass shelves beside the toilet." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fittings",
+      "title": "Taps, showers and fittings",
+      "intro": "Choose the finish for your taps and fittings, your shower and your toilet.",
+      "questions": [
+        {
+          "id": "finish", "label": "Tap and fitting finish", "type": "single", "required": true,
+          "options": [
+            { "id": "chrome", "label": "Chrome", "desc": "Bright and classic", "shot": "base:tap", "prompt": "Use the base tap in polished chrome." },
+            { "id": "matt_black", "label": "Matt black", "desc": "Bold and modern", "shot": "colour:tap", "prompt": "Keep everything identical. Change only the tap finish to matt black." },
+            { "id": "brushed_brass", "label": "Brushed brass", "desc": "Warm and luxurious", "shot": "colour:tap", "prompt": "Keep everything identical. Change only the tap finish to brushed brass." },
+            { "id": "brushed_nickel", "label": "Brushed nickel", "desc": "Soft, satin silver", "shot": "colour:tap", "prompt": "Keep everything identical. Change only the tap finish to brushed nickel." },
+            { "id": "gunmetal", "label": "Gunmetal", "desc": "Dark, brushed grey", "shot": "colour:tap", "prompt": "Keep everything identical. Change only the tap finish to brushed gunmetal grey." }
+          ]
+        },
+        {
+          "id": "shower_type", "label": "Shower", "type": "single", "required": true,
+          "showIf": { "q": "bath_shower", "in": ["walk_in", "enclosure", "shower_bath", "separate"] },
+          "options": [
+            { "id": "rainfall", "label": "Rainfall and handset", "desc": "Overhead drench plus a handheld", "shot": "new", "prompt": "Close-up of a shower wall with a large square overhead rainfall shower head and a separate handheld shower on a slide rail, thermostatic valve below, light grey tiles, chrome." },
+            { "id": "bar", "label": "Thermostatic bar", "desc": "Simple, safe temperature", "shot": "new", "prompt": "Close-up of a shower wall with an exposed thermostatic bar shower valve, riser rail and handheld shower head, light grey tiles, chrome." },
+            { "id": "electric", "label": "Electric shower", "desc": "Heats its own water", "shot": "new", "prompt": "Close-up of a shower wall with a slim modern white electric shower unit, riser rail and handheld head, light grey tiles." },
+            { "id": "digital", "label": "Digital shower", "desc": "Push-button control", "shot": "new", "prompt": "Close-up of a shower wall with a sleek digital shower control panel with a small display, overhead rainfall head, light grey tiles, chrome." }
+          ]
+        },
+        {
+          "id": "screen", "label": "Glass screen", "type": "single", "required": true,
+          "showIf": { "q": "bath_shower", "in": ["walk_in", "enclosure", "shower_bath", "separate"] },
+          "options": [
+            { "id": "frameless", "label": "Frameless clear glass", "shot": "new", "prompt": "A walk-in shower with a single frameless clear glass panel, light grey tiles, soft daylight." },
+            { "id": "framed_black", "label": "Black framed", "desc": "Crittall style", "shot": "new", "prompt": "A walk-in shower with a black-framed grid glass panel in a Crittall style, light grey tiles, soft daylight." },
+            { "id": "fluted", "label": "Fluted glass", "desc": "Privacy with texture", "shot": "new", "prompt": "A walk-in shower with a reeded fluted glass panel and a slim brushed metal frame, light grey tiles, soft daylight." },
+            { "id": "bath_screen", "label": "Bath screen", "desc": "For a shower over a bath", "shot": "new", "prompt": "A white built-in bath with a fixed clear glass bath screen and an overhead shower, light grey tiles, soft daylight." }
+          ]
+        },
+        {
+          "id": "toilet", "label": "Toilet", "type": "single", "required": true,
+          "options": [
+            { "id": "wall_hung", "label": "Wall-hung", "desc": "Floating, easy to clean under", "shot": "new", "prompt": "Close-up of a white wall-hung toilet with a concealed cistern and a chrome flush plate, light grey tiles." },
+            { "id": "back_to_wall", "label": "Back to wall", "desc": "Hidden cistern, sits on the floor", "shot": "new", "prompt": "Close-up of a white back-to-wall toilet in front of a light oak unit hiding the cistern, light grey tiles." },
+            { "id": "close_coupled", "label": "Close coupled", "desc": "Traditional with a visible cistern", "shot": "new", "prompt": "Close-up of a white modern close-coupled toilet with the cistern on top, light grey tiles." },
+            { "id": "comfort", "label": "Comfort height", "desc": "Taller seat, easier to use", "shot": "new", "prompt": "Close-up of a white comfort-height toilet with a slightly taller pan and a small grab rail beside it, light grey tiles." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "finishing",
+      "title": "Mirrors, lighting and finishing touches",
+      "intro": "Choose your mirror, then any extras you'd like.",
+      "questions": [
+        {
+          "id": "mirror", "label": "Mirror", "type": "single", "required": true,
+          "options": [
+            { "id": "led", "label": "LED mirror", "desc": "Backlit, often with demister", "shot": "edit:vanity", "prompt": "Keep everything identical. Change only the mirror to a round LED backlit mirror glowing softly." },
+            { "id": "standard", "label": "Standard mirror", "desc": "Simple and timeless", "shot": "base:vanity", "prompt": "Use the base vanity with its round mirror." },
+            { "id": "cabinet", "label": "Mirror cabinet", "desc": "Storage behind the mirror", "shot": "edit:vanity", "prompt": "Keep everything identical. Change only the mirror to a rectangular mirrored wall cabinet." }
+          ]
+        },
+        {
+          "id": "extras", "label": "Finishing touches", "type": "multi", "required": false, "hint": "Choose any",
+          "options": [
+            { "id": "spotlights", "label": "Recessed spotlights", "shot": "edit:room", "prompt": "Keep everything identical. Add four small recessed ceiling spotlights, switched on." },
+            { "id": "feature_light", "label": "Feature lighting", "desc": "Pendant or wall lights", "shot": "edit:room", "prompt": "Keep everything identical. Add a small glass pendant light beside the mirror, switched on, warm glow." },
+            { "id": "led_strip", "label": "LED strip lighting", "desc": "In niches or under the vanity", "shot": "edit:room", "prompt": "Keep everything identical. Add warm LED strip lighting under the vanity and in the shower niche, switched on, slightly dimmer room." },
+            { "id": "towel_rail", "label": "Heated towel rail", "shot": "edit:room", "prompt": "Keep everything identical. Add a chrome ladder-style heated towel rail on the wall with a folded white towel." },
+            { "id": "niche", "label": "Shower niche", "desc": "Recessed shelf in the shower", "shot": "base:wall", "prompt": "Use the base wall, which shows the shower niche." },
+            { "id": "underfloor", "label": "Underfloor heating", "shot": "new", "prompt": "A bathroom floor partly laid: electric underfloor heating mat with thin orange heating cables on insulation boards, half covered with light grey porcelain tiles, top-down view." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Review your design",
+      "intro": "Check your choices, add a few details and send your design to us for a free quotation.",
+      "review": true
+    }
+  ],
+  "budgets": ["Under £5,000", "£5,000 to £10,000", "£10,000 to £15,000", "£15,000 to £25,000", "Over £25,000", "Not sure yet"],
+  "timeframes": ["As soon as possible", "Within 3 months", "3 to 6 months", "6 to 12 months", "Just exploring ideas"]
+}

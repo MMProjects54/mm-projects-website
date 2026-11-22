@@ -1,0 +1,26 @@
+{
+  "teaser": {
+    "eyebrow": "MM Projects",
+    "heading": "Bring Your Ideas to Life",
+    "intro": "Explore styles, choose your finishes and start planning your next project.",
+    "button": "Explore Design Studio"
+  },
+  "landing": {
+    "eyebrow": "MM Projects Design Studio",
+    "heading": "Design your space, step by step",
+    "intro": "Choose a room, explore styles and finishes, and build a design that's yours. When you're happy, send it to us for a free, no-obligation quotation.",
+    "steps": [
+      { "title": "Choose a room", "text": "Bathroom, kitchen, or media and feature wall." },
+      { "title": "Design it your way", "text": "Ten simple steps with pictures of every option. Your progress saves as you go." },
+      { "title": "Get a free quotation", "text": "Send your design and we'll be in touch to talk it through and arrange a visit." }
+    ],
+    "note": "Images illustrate design options and are not photographs of MM Projects' own work. No prices are calculated in the studio; every quotation is based on a visit to your home.",
+    "seoTitle": "Design Studio | MM Projects, Glasgow",
+    "seoDescription": "Design your bathroom, kitchen or media wall online with the MM Projects Design Studio, then request a free quotation. Glasgow and surrounding areas."
+  },
+  "studios": [
+    { "id": "bathroom", "label": "Bathrooms", "title": "Bathroom Design Studio", "text": "Layout, tiles, vanity, taps and finishing touches.", "image": "images/studio/home-bathroom.jpg", "alt": "Modern bathroom with grey stone tiles, a walk-in shower and a floating oak vanity" },
+    { "id": "kitchen", "label": "Kitchens", "title": "Kitchen Design Studio", "text": "Layout, cabinet doors, worktops, appliances and lighting.", "image": "images/studio/home-kitchen.jpg", "alt": "Contemporary kitchen with wood cabinetry, a quartz-topped island and warm lighting" },
+    { "id": "media-wall", "label": "Media Walls", "title": "Media & Feature Wall Design Studio", "text": "Layout, fireplace, panelling, storage and lighting.", "image": "images/studio/home-media-wall.jpg", "alt": "Media wall with acoustic slat panelling, a TV, a fireplace and LED lighting" }
+  ]
+}

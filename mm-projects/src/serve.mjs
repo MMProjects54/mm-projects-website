@@ -18,7 +18,7 @@ createServer(async (req, res) => {
     res.writeHead(200, { 'Content-Type': TYPES[extname(file)] || 'application/octet-stream' }).end(body);
   } catch {
     try {
-      const body = await readFile(join(PUBLIC, path + '.html'));
+      const body = await readFile(join(PUBLIC, path + '.html')).catch(() => readFile(join(PUBLIC, path, 'index.html')));
       res.writeHead(200, { 'Content-Type': TYPES['.html'] }).end(body);
     } catch {
       res.writeHead(404, { 'Content-Type': TYPES['.html'] }).end(await readFile(join(PUBLIC, '404.html')));

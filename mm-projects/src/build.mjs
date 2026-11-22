@@ -6,7 +6,9 @@ import { createHash } from 'node:crypto';
 import { join, dirname, extname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { parseTally } from './lib/html.mjs';
-import { homePage, servicesPage, privacyPage, notFoundPage } from './pages.mjs';
+import { homePage, servicesPage, privacyPage, notFoundPage, designLandingPage, studioPage } from './pages.mjs';
+import { missingImages } from './components/studio.mjs';
+import { ICONS } from './lib/icons.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'public');
@@ -107,6 +109,11 @@ async function build() {
   }));
   const warnings = [];
   const errors = [];
+  // Design Studio: landing/teaser text plus one file per studio (content/studios/*.json)
+  const design = JSON.parse(await readFile(join(ROOT, 'content/design.json'), 'utf8'));
+  const studioFiles = (await readdir(join(ROOT, 'content/studios')).catch(() => [])).filter((f) => f.endsWith('.json')).sort();
+  const studios = [];
+  for (const f of studioFiles) studios.push(JSON.parse(await readFile(join(ROOT, 'content/studios', f), 'utf8')));
 
   // ---- image sizes + missing-image check
   const imageSizes = {};
@@ -125,6 +132,15 @@ async function build() {
     ...projects.beforeAfter.flatMap((p) => [p.before, p.after]),
   ].filter(Boolean);
   for (const src of referenced) if (!existsSync(join(ROOT, src))) errors.push(`Image not found: ${src} (check the file name and folder)`);
+  const imageExists = (src) => existsSync(join(ROOT, src));
+  for (const s of design.studios) if (!imageExists(s.image)) errors.push(`Design Studio image not found: ${s.image}`);
+  // Until the studios go live (STUDIO_LIVE=1) they run as a preview: Send shows a note instead of sending.
+  const studioPreview = process.env.STUDIO_LIVE !== '1';
+  const missing = studios.flatMap((st) => missingImages(st, imageExists));
+  if (missing.length) {
+    const msg = `${missing.length} Design Studio option(s) still need a picture${studioPreview ? '' : ' (the studio cannot go live without them)'}:\n      ${missing.slice(0, 12).join('\n      ')}${missing.length > 12 ? `\n      …and ${missing.length - 12} more` : ''}`;
+    (studioPreview ? warnings : errors).push(msg);
+  }
 
   // ---- helpful warnings
   if (!parseTally(settings.tally.enquiryForm)) warnings.push('Tally enquiry form not connected: the quote form shows a labelled preview. Add it under Business settings > Tally forms.');
@@ -149,18 +165,21 @@ async function build() {
   // ---- assets
   const css = themeCss(settings.brand) + (await readFile(join(ROOT, 'src/styles/site.css'), 'utf8'));
   const js = await readFile(join(ROOT, 'src/scripts/site.js'), 'utf8');
-  const version = createHash('sha1').update(css + js).digest('hex').slice(0, 8);
+  const studioJs = await readFile(join(ROOT, 'src/scripts/studio.js'), 'utf8');
+  const version = createHash('sha1').update(css + js + studioJs).digest('hex').slice(0, 8);
 
   await rm(OUT, { recursive: true, force: true });
   await mkdir(join(OUT, 'assets'), { recursive: true });
   await writeFile(join(OUT, 'assets/site.css'), css);
   await writeFile(join(OUT, 'assets/site.js'), js);
+  await writeFile(join(OUT, 'assets/studio.js'), studioJs);
   await cp(join(ROOT, 'images'), join(OUT, 'images'), { recursive: true });
   await cp(join(ROOT, 'fonts'), join(OUT, 'fonts'), { recursive: true });
   await cp(join(ROOT, 'favicon.ico'), join(OUT, 'favicon.ico'));
 
   // ---- pages
-  const base = { settings, text, services, projects, reviews, privacy, imageSizes, version };
+  const studioIcons = Object.fromEntries(['check', 'arrowRight', 'arrowLeft', 'upload', 'image', 'close', 'pencil'].map((k) => [k, ICONS[k]]));
+  const base = { settings, text, services, projects, reviews, privacy, imageSizes, version, design, studios, imageExists, studioPreview, studioIcons };
   const make = (page) => ({
     ...base,
     page,
@@ -172,8 +191,13 @@ async function build() {
     'services.html': servicesPage(make('services')),
     'privacy.html': privacyPage(make('privacy')),
     '404.html': notFoundPage(make('404')),
+    'design/index.html': designLandingPage(make('design')),
+    ...Object.fromEntries(studios.map((st) => [`design/${st.id}/index.html`, studioPage(make('studio'), st)])),
   };
-  for (const [file, html] of Object.entries(pages)) await writeFile(join(OUT, file), html.replace(/\n\s*\n/g, '\n'));
+  for (const [file, html] of Object.entries(pages)) {
+    await mkdir(dirname(join(OUT, file)), { recursive: true });
+    await writeFile(join(OUT, file), html.replace(/\n\s*\n/g, '\n'));
+  }
 
   // ---- site files
   await writeFile(join(OUT, 'site.webmanifest'), JSON.stringify({
