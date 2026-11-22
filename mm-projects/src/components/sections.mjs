@@ -5,7 +5,9 @@ import { button, sectionHeading, img, serviceCard, galleryTile, beforeAfter, rev
 
 export function hero(ctx) {
   const h = ctx.text.hero;
-  return `<section class="hero" id="top" aria-labelledby="hero-title">
+  const pic = h.image ? `<picture class="hero__media" aria-hidden="true">${h.imageDesktop ? `<source media="(min-width: 760px)" srcset="${esc(h.imageDesktop)}">` : ''}<img src="${esc(h.image)}" alt="" ${dims(ctx, h.image)} fetchpriority="high" decoding="async"></picture>` : '';
+  return `<section class="hero${h.image ? ' hero--image' : ''}" id="top" aria-labelledby="hero-title">
+  ${pic}
   <div class="container hero__inner">
     <div class="hero__content">
       ${h.eyebrow ? `<p class="eyebrow eyebrow--light">${esc(h.eyebrow)}</p>` : ''}
