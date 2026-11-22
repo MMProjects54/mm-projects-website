@@ -138,6 +138,8 @@ content:
           - { name: subheading, label: Services line, type: string }
           - { name: location, label: Location line, type: string }
           - { name: button, label: Button text, type: string }
+          - { name: image, label: Background picture (phones), type: image }
+          - { name: imageDesktop, label: Background picture (computers, wide), type: image }
       - name: services
         label: Our Services section
         type: object

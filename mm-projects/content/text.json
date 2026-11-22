@@ -3,7 +3,9 @@
     "heading": "Home Improvements & Renovations",
     "subheading": "Kitchens • Bathrooms • Bespoke Joinery",
     "location": "Glasgow & surrounding areas",
-    "button": "Get a Free Quote"
+    "button": "Get a Free Quote",
+    "image": "images/hero-bathroom.jpg",
+    "imageDesktop": ""
   },
   "services": {
     "eyebrow": "Our Services",
